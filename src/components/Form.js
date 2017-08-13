@@ -15,7 +15,10 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    axios.post('http://localhost:3001/search?', {
+    axios.get('/search?', {
+      params: {
+        track: this.state.value
+      }
     })
     .then(function (response) {
       console.log(response);
@@ -28,7 +31,7 @@ class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>
     );
