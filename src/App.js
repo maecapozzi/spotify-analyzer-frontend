@@ -3,12 +3,13 @@ import axios from 'axios'
 import Home from './components/Home'
 
 class App extends Component {
-  state = {tracks: []}
+  state = {
+    tracks: []
+  }
 
   componentDidMount() {
     axios.get('http://localhost:3001/')
-      .then(res => console.log(res))
-      .then(tracks => this.setState({ tracks }));
+      .then(tracks => this.setState({ tracks }))
   }
 
   render() {
