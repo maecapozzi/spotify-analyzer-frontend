@@ -1,10 +1,10 @@
 import React from 'react'
-import Form from './Form'
+import SearchForm from './SearchForm'
 
 const Home = () => (
   <div>
     <h1>Home</h1>
-    <Form />
+    <SearchForm />
   </div>
 )
 
