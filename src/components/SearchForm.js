@@ -3,22 +3,22 @@ import axios from 'axios'
 import SearchResults from './SearchResults'
 
 class SearchForm extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       value: '',
-      results: '',
+      results: ''
     }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange(event) {
+  handleChange (event) {
     this.setState({value: event.target.value})
   }
 
-  handleSubmit(event) {
+  handleSubmit (event) {
     event.preventDefault()
     axios.get('/search?', {
       params: {
@@ -28,14 +28,11 @@ class SearchForm extends Component {
       .then((response) => {
         if (response.status === 200) {
           const songs = []
-          response.data.results.forEach(function(song) {
+          response.data.results.forEach(song => {
             songs.push(song.name)
           })
 
-          console.log(songs)
           this.setState({results: songs})
-
-          //Right now, I can access the data, but I can't turn it into a dataType that my props can handle.
         }
       })
       .catch((error) => {
@@ -44,12 +41,20 @@ class SearchForm extends Component {
     )
   }
 
-  render() {
+  render () {
+    if (!this.state.results) {
+      return (
+        <form onSubmit={this.handleSubmit}>
+          <input type='text' value={this.state.value} onChange={this.handleChange} />
+          <input type='submit' value='Submit' />
+        </form>
+      )
+    }
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
+          <input type='text' value={this.state.value} onChange={this.handleChange} />
+          <input type='submit' value='Submit' />
         </form>
         <SearchResults results={this.state.results} />
       </div>
