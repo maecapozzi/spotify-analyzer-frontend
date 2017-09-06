@@ -23,5 +23,10 @@
     "react-test-renderer": "^15.6.1",
     "regenerator-runtime": "^0.11.0",
     "standard": "^10.0.3"
+  },
+  "standard": {
+    "ignore": [
+      "src/**.test.js"
+    ]
   }
 }
