@@ -1,6 +1,7 @@
 import React, { Component } from 'react'  // eslint-disable-line no-unused-vars
 import axios from 'axios'
 import SearchResults from './SearchResults'
+import RaisedButton from 'material-ui/RaisedButton'
 
 class SearchForm extends Component {
   constructor (props) {
@@ -29,9 +30,12 @@ class SearchForm extends Component {
         if (response.status === 200) {
           const songs = []
           response.data.results.forEach(song => {
-            songs.push(song.name)
+            songs.push({
+              id: song.id,
+              name: song.name,
+              artist: song.artists[0].name
+            })
           })
-
           this.setState({results: songs})
         }
       })
