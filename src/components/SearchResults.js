@@ -1,5 +1,4 @@
 import React from 'react'
-import SongLink from './SongLink'
 
 const SearchResults = props => (
   <div>

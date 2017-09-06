@@ -1,7 +1,6 @@
-import React, { Component } from 'react'  // eslint-disable-line no-unused-vars
+import React, { Component } from 'react'
 import axios from 'axios'
 import SearchResults from './SearchResults'
-import RaisedButton from 'material-ui/RaisedButton'
 
 class SearchForm extends Component {
   constructor (props) {
