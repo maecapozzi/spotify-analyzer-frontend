@@ -5,21 +5,25 @@ import Results from './Results'
 class SongLink extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      id: this.props.id
-    }
+    this.state = {}
 
     this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick (event) {
     event.preventDefault()
-    axios.get('/analyze/' + this.state.id)
+    axios.get('/analyze/' + this.props.id)
     .then((response) => {
       if (response.status === 200) {
         this.setState({
-          danceability: response.data.danceability[0],
-          acousticness: response.data.acousticness[0]
+          danceability: response.data.danceability,
+          acousticness: response.data.acousticness,
+          energy: response.data.energy,
+          liveness: response.data.liveness,
+          instrumentalness: response.data.instrumentalness,
+          loudness: response.data.loudness,
+          speechiness: response.data.speechiness,
+          valence: response.data.valence
         })
       }
     })
@@ -40,6 +44,9 @@ class SongLink extends Component {
     }
     return (
       <div>
+        <li onClick={this.handleClick}>
+          {this.props.name} by {this.props.artist}
+        </li>
         <Results danceability={this.state.danceability} acousticness={this.state.acousticness} />
       </div>
     )
