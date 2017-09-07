@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Results from './Results'
+import SongData from './SongData'
 
 class SongLink extends Component {
   constructor (props) {
@@ -44,10 +44,17 @@ class SongLink extends Component {
     }
     return (
       <div>
-        <li onClick={this.handleClick}>
-          {this.props.name} by {this.props.artist}
-        </li>
-        <Results danceability={this.state.danceability} acousticness={this.state.acousticness} />
+        <h1>{this.props.name} by {this.props.artist}</h1>
+        <SongData
+          danceability={this.state.danceability}
+          acousticness={this.state.acousticness}
+          energy={this.state.energy}
+          liveness={this.state.liveness}
+          instrumentalness={this.state.instrumentalness}
+          loudness={this.state.loudness}
+          speechiness={this.state.speechiness}
+          valence={this.state.valence}
+        />
       </div>
     )
   }

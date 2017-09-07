@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Results = props => (
+const SongData = props => (
   <div>
     <p>danceability: {props.danceability}</p>
     <p>acousticness: {props.acousticness}</p>
@@ -13,4 +13,4 @@ const Results = props => (
   </div>
 )
 
-export default Results
+export default SongData
