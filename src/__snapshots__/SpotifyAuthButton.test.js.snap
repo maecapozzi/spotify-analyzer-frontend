@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+<button>
+  <a
+    href="http://localhost:3001/auth/spotify"
+  >
+    Login with Spotify
+  </a>
+</button>
+`;
