@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import SearchResults from './SearchResults'
+import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton'
 
 class SearchForm extends Component {
   constructor (props) {
@@ -47,19 +49,19 @@ class SearchForm extends Component {
   render () {
     if (!this.state.results) {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <input type='text' value={this.state.value} onChange={this.handleChange} />
-          <input type='submit' value='Submit' />
+        <form className='search-form' onSubmit={this.handleSubmit}>
+          <input className='search-form--input' name='search' type='text' value={this.state.value} onChange={this.handleChange} />
+          <input className='search-form--submit' label='Submit' type='submit' value='Submit' />
         </form>
       )
     }
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type='text' value={this.state.value} onChange={this.handleChange} />
-          <input type='submit' value='Submit' />
+        <form className='search-form' onSubmit={this.handleSubmit}>
+          <input className='search-form--input' name='search' type='text' value={this.state.value} onChange={this.handleChange} />
+          <input className='search-form--submit' label='submit' type='submit' value='Submit' />
         </form>
-        <SearchResults results={this.state.results} />
+        <SearchResults label='Submit' results={this.state.results} />
       </div>
     )
   }

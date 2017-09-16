@@ -3,3 +3,41 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.header {
+  color: #7D8DFF;
+  font-family: 'Roboto';
+  font-size: 3em;
+  margin-left: 0.5em;
+}
+
+.subheader {
+  color: #616582;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+.search-form {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.search-form--input {
+  border: 2px #7D8DFF solid;
+  height: 3em;
+  width: 20em;
+  -webkit-appearance:none;
+}
+
+.search-form--submit {
+  border: 2px #7D8DFF solid;
+  background-color: #7D8DFF;
+  color: #fff;
+  height: 3.6em;
+  width: 7em;
+  padding: 0;
+}
+
+.search-form--input:focus, .search-form--submit:focus {
+  outline:0;
+}
