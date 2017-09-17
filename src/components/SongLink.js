@@ -41,7 +41,7 @@ class SongLink extends Component {
       )
     }
     return (
-      <div>
+      <div className='song-data'>
         <h1>{this.props.name} by {this.props.artist}</h1>
         <SongData
           danceability={this.state.danceability}

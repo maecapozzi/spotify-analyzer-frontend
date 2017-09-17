@@ -55,8 +55,13 @@ body {
 
 .search-results--ul {
   padding-right: 2em;
+  text-align: center;
 }
 
+.song-data {
+  text-align: center;
+  margin: 2em 0;
+}
 
 @media screen and (min-width: 800px) {
   .song-link--container {
