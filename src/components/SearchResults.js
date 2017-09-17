@@ -8,12 +8,12 @@ class SearchResults extends Component {
 
   render () {
     return (
-      <div>
-        <ul>
+      <div className='search-results--container'>
+        <div className='search-results--p'>
           {this.props.results.map((result) => {
             return <SongLink key={result.id} id={result.id} name={result.name} artist={result.artist} />
           })}
-        </ul>
+        </div>
       </div>
     )
   }

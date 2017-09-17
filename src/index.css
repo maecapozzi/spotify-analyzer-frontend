@@ -41,3 +41,26 @@ body {
 .search-form--input:focus, .search-form--submit:focus {
   outline:0;
 }
+
+.search-results--container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-results--p {
+  color: #616582;
+  font-family: 'Roboto';
+  margin: 0 auto;
+}
+
+.search-results--ul {
+  padding-right: 2em;
+}
+
+
+@media screen and (min-width: 800px) {
+  .song-link--container {
+    margin: 0 auto;
+    width: 30%;
+  }
+}

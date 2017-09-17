@@ -35,11 +35,9 @@ class SongLink extends Component {
   render () {
     if (!this.state.danceability) {
       return (
-        <div>
-          <ul onClick={this.handleClick}>
-            {this.props.name} by {this.props.artist}
-          </ul>
-        </div>
+        <ul className='search-results--ul' onClick={this.handleClick}>
+          {this.props.name} by {this.props.artist}
+        </ul>
       )
     }
     return (
