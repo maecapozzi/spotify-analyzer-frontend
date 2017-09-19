@@ -22,7 +22,7 @@ class SearchForm extends Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    axios.get('/search?', {
+    axios.get('http://spotify-viz-api/search?', {
       params: {
         track: this.state.value
       }

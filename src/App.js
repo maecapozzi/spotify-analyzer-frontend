@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('/tokens')
+    axios.get('http://spotify-viz-api/tokens')
     .then((response) => {
       if (response.data === 'OK') {
         this.setState({ authenticateInProgress: true })
