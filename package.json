@@ -14,7 +14,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "http://http://spotify-viz-api.herokuapp.com/",
   "devDependencies": {
     "axios": "^0.16.2",
     "babel-jest": "^21.0.0",
