@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('https://spotify-viz-api/tokens')
+    axios.get('https://spotify-viz-api.herokuapp.com/tokens')
     .then((response) => {
       if (response.data === 'OK') {
         this.setState({ authenticateInProgress: true })
