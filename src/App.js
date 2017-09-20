@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get(this.url)
+    axios.get('/tokens')
     .then((response) => {
       if (response.data === 'OK') {
         this.setState({ authenticateInProgress: true })
