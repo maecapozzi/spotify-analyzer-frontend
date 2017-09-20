@@ -9,9 +9,6 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    let uri = PROCESS.ENV.API_URI || 'http://localhost:3001'
-    this.url = `${uri}/tokens`
-
     this.state = {
       loggedIn: false,
       authenticateInProgress: false
