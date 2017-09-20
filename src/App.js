@@ -7,10 +7,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 
 class App extends Component {
   constructor (props) {
+    super(props)
+
     let uri = PROCESS.ENV.API_URI || 'http://localhost:3001'
     this.url = `${uri}/tokens`
-
-    super(props)
 
     this.state = {
       loggedIn: false,
