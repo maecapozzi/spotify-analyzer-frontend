@@ -7,6 +7,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 
 class App extends Component {
   constructor (props) {
+    let uri = PROCESS.ENV.API_URI || 'http://localhost:3001'
+    this.url = `${uri}/tokens`
+
     super(props)
 
     this.state = {
@@ -16,7 +19,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('http://spotify-viz-api/tokens')
+    axios.get(this.url)
     .then((response) => {
       if (response.data === 'OK') {
         this.setState({ authenticateInProgress: true })
