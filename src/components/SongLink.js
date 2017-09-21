@@ -12,7 +12,7 @@ class SongLink extends Component {
 
   handleClick (event) {
     event.preventDefault()
-    axios.get('/analyze/' + this.props.id)
+    axios.get('https://spotify-viz-api.herokuapp.com/analyze/' + this.props.id)
     .then((response) => {
       if (response.status === 200) {
         this.setState({
