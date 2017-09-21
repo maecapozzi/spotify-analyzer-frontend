@@ -22,11 +22,8 @@ class SearchForm extends Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    axios.get('https://spotify-viz-api.herokuapp.com/search?', {
-      params: {
-        track: this.state.value
-      }
-    })
+    axios.get('https://spotify-viz-api.herokuapp.com/tokens')
+
       .then((response) => {
         if (response.status === 200) {
           const songs = []
