@@ -7,6 +7,10 @@ import RaisedButton from 'material-ui/RaisedButton'
 class SearchForm extends Component {
   constructor (props) {
     super(props)
+
+    let uri = process.env.API_URI || 'http://0.0.0.0:3001'
+    this.url = `${uri}/search?`
+
     this.state = {
       value: '',
       results: ''
@@ -22,7 +26,7 @@ class SearchForm extends Component {
 
   handleSubmit (event) {
     event.preventDefault()
-    axios.get('https://spotify-viz-api.herokuapp.com/search?', {
+    axios.get(this.url, {
       params: {
         track: this.state.value
       }

@@ -5,6 +5,10 @@ import SongData from './SongData'
 class SongLink extends Component {
   constructor (props) {
     super(props)
+
+    let uri = process.env.API_URI || 'http://0.0.0.0:3001'
+    this.url = `${uri}/analyze/`
+
     this.state = {}
 
     this.handleClick = this.handleClick.bind(this)
@@ -12,7 +16,7 @@ class SongLink extends Component {
 
   handleClick (event) {
     event.preventDefault()
-    axios.get('https://spotify-viz-api.herokuapp.com/analyze/' + this.props.id)
+    axios.get(this.url + this.props.id)
     .then((response) => {
       if (response.status === 200) {
         this.setState({

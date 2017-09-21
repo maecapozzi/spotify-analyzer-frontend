@@ -9,6 +9,9 @@ class App extends Component {
   constructor (props) {
     super(props)
 
+    let uri = process.env.API_URI || 'http://0.0.0.0:3001'
+    this.url = `${uri}/tokens`
+
     this.state = {
       loggedIn: false,
       authenticateInProgress: false
@@ -16,7 +19,7 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get('https://spotify-viz-api.herokuapp.com/tokens')
+    axios.get(this.url)
     .then((response) => {
       if (response.data === 'OK') {
         this.setState({ authenticateInProgress: true })
