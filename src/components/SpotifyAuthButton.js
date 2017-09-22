@@ -9,8 +9,11 @@ class SpotifyAuthButton extends Component {
   }
 
   render () {
-    console.log(this.url)
-    return <button><a href={this.url}>Login with Spotify</a></button>
+    return (
+      <button>
+        <a href={this.url}>Login with Spotify</a>
+      </button>
+    )
   }
 }
 
