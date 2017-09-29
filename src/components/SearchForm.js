@@ -8,7 +8,7 @@ class SearchForm extends Component {
   constructor (props) {
     super(props)
 
-    let uri = 'https://spotify-viz-api.herokuapp.com'
+    let uri = 'http://localhost:3001'
     this.url = `${uri}/search?`
 
     this.state = {
