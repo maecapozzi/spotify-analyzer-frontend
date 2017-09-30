@@ -9,7 +9,7 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    let uri = 'https://spotify-viz-api.herokuapp.com/'
+    let uri = 'https://spotify-viz-api.herokuapp.com'
     this.url = `${uri}/tokens`
 
     this.state = {
