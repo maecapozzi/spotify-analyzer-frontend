@@ -3,36 +3,42 @@ import ReactHighcharts from 'react-highcharts'
 
 class SongData extends Component {
   constructor (props) {
-    super()
+    super(props)
 
     this.state = {
-      danceability: '',
-      acousticness: '',
-      energy: '',
-      liveness: '',
-      instrumentalness: '',
-      loudness: '',
-      speechiness: '',
-      valence: ''
-    }
-  }
-
-  componentWillMount () {
-    for (let i in this.props) {
-      console.log(this.props[i])
+      danceability: props.danceability,
+      acousticness: props.acousticness,
+      energy: props.energy,
+      liveness: props.energy,
+      instrumentalness: props.instrumentalness,
+      speechiness: props.speechiness,
+      valence: props.valence
     }
   }
 
   render () {
     var config = {
+      chart: {
+        type: 'bar'
+      },
+      title: null,
       xAxis: {
-        categories: ['danceability', 'acousticness', 'energy', 'liveness', 'instrumentalness', 'loudness', 'speechiness', 'valence']
+        categories: ['danceability', 'acousticness', 'energy', 'liveness', 'instrumentalness', 'speechiness', 'valence']
       },
       yAxis: {
-        max: 100
+        max: 1,
+        title: {
+          text: null
+        }
+      },
+      plotOptions: {
+        series: {
+          colorByPoint: true,
+          colors: ['#7D8DFF']
+        }
       },
       series: [{
-        data: [this.state.danceability, this.props.acousticness, this.props.energy, this.props.liveness, this.props.instrumentalness, this.props.loudness, this.props.speechiness, this.props.valence]
+        data: [this.state.danceability, this.state.acousticness, this.state.energy, this.state.liveness, this.state.instrumentalness, this.state.speechiness, this.state.valence]
       }]
     }
     return (
@@ -42,12 +48,3 @@ class SongData extends Component {
 }
 
 export default SongData
-
-// <p>danceability: {this.props.danceability}</p>
-//         <p>acousticness: {this.props.acousticness}</p>
-//         <p>energy: {this.props.energy}</p>
-//         <p>liveness: {this.props.liveness}</p>
-//         <p>instrumentalness: {this.props.instrumentalness}</p>
-//         <p>loudness: {this.props.loudness}</p>
-//         <p>speechiness: {this.props.speechiness}</p>
-//         <p>valence: {this.props.valence}</p>

@@ -53,7 +53,6 @@ class SongLink extends Component {
           energy={this.state.energy}
           liveness={this.state.liveness}
           instrumentalness={this.state.instrumentalness}
-          loudness={this.state.loudness}
           speechiness={this.state.speechiness}
           valence={this.state.valence}
         />
