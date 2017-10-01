@@ -9,7 +9,7 @@ https://spotify-viz-frontend.herokuapp.com/
 3. `npm start`
 
 
-Todo
+**Todo**
 * Error Handling 
 * Testing
 * Design & Styling
