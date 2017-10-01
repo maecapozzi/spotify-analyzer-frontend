@@ -1,4 +1,6 @@
-# Frontend of Spotify Viz application
+# Spotify Viz Frontend
+
+https://spotify-viz-frontend.herokuapp.com/
 
 ## To run locally:
 
