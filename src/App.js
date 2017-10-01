@@ -9,7 +9,7 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    let uri = 'https://spotify-viz-api.herokuapp.com'
+    let uri = process.env.API_URI || 'http://0.0.0.0:3001'
     this.url = `${uri}/tokens`
 
     this.state = {
@@ -36,18 +36,14 @@ class App extends Component {
       return <h1>Loading ... </h1>
     } else if (!this.state.loggedIn && !this.state.authenticateInProgress) {
       return (
-        <div>
-          <MuiThemeProvider>
-            <Login />
-          </MuiThemeProvider>
+        <div className='login-container'>
+          <Login />
         </div>
       )
     } else if (this.state.loggedIn && !this.state.authenticateInProgress) {
       return (
         <div>
-          <MuiThemeProvider>
-            <Home />
-          </MuiThemeProvider>
+          <Home />
         </div>
       )
     }

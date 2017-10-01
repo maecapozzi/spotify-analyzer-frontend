@@ -6,7 +6,7 @@ class SongLink extends Component {
   constructor (props) {
     super(props)
 
-    let uri = 'https://spotify-viz-api.herokuapp.com'
+    let uri = process.env.API_URI || 'http://0.0.0.0:3001'
     this.url = `${uri}/analyze/`
 
     this.state = {}

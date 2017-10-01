@@ -3,7 +3,7 @@ import SpotifyAuthButton from './SpotifyAuthButton'
 
 const Login = () => (
   <div>
-    <h1 className='header'>Login to Spotify</h1>
+    <h1 className='header'>Log In</h1>
     <SpotifyAuthButton />
   </div>
 )

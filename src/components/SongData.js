@@ -19,7 +19,8 @@ class SongData extends Component {
   render () {
     var config = {
       chart: {
-        type: 'bar'
+        type: 'bar',
+        width: 800
       },
       title: null,
       xAxis: {
@@ -42,7 +43,9 @@ class SongData extends Component {
       }]
     }
     return (
-      <ReactHighcharts config={config} ref='test' />
+      <div className='chart'>
+        <ReactHighcharts config={config} ref='test' />
+      </div>
     )
   }
 }
