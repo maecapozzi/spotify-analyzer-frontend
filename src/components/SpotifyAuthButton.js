@@ -4,7 +4,8 @@ class SpotifyAuthButton extends Component {
   constructor () {
     super()
 
-    let uri = 'https://spotify-viz-api.herokuapp.com' || 'http://0.0.0.0:3001'
+    // let uri = 'https://spotify-viz-api.herokuapp.com' || 'http://0.0.0.0:3001'
+    let uri = 'http://0.0.0.0:3001'
     this.url = `${uri}/auth/spotify`
   }
 
