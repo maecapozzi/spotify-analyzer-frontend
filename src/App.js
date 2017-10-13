@@ -11,21 +11,17 @@ class App extends Component {
 
     // let uri = 'https://spotify-viz-api.herokuapp.com' || 'http://0.0.0.0:3001'
     let uri = 'http://0.0.0.0:3001'
-    this.url = `${uri}/tokens`
+    this.url = 'http://localhost:3001'
 
     this.state = {
-      loggedIn: false,
-      authenticateInProgress: false
+      loggedIn: false
     }
   }
 
   componentWillMount () {
     axios.get(this.url)
     .then((response) => {
-      if (response.data === 'OK') {
-        this.setState({ authenticateInProgress: true })
-        setTimeout(() => this.setState({ loggedIn: true, authenticateInProgress: false }), 500)
-      }
+      console.log(response)
     })
     .catch((error) => {
       console.log(error)
@@ -33,15 +29,13 @@ class App extends Component {
   }
 
   render () {
-    if (this.state.authenticateInProgress) {
-      return <h1>Loading ... </h1>
-    } else if (!this.state.loggedIn && !this.state.authenticateInProgress) {
+    if (!this.state.loggedIn) {
       return (
         <div className='login-container'>
           <Login />
         </div>
       )
-    } else if (this.state.loggedIn && !this.state.authenticateInProgress) {
+    } else if (this.state.loggedIn) {
       return (
         <div>
           <Home />
