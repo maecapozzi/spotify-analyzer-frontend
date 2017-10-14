@@ -3,7 +3,7 @@ import SongLink from './SongLink'
 
 class SearchResults extends Component {
   constructor (props) {
-    super()
+    super(props)
   }
 
   render () {
