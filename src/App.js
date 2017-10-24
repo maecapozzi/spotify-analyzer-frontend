@@ -7,8 +7,8 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    // this.url = 'https://spotify-viz-api.herokuapp.com'
-    this.url = 'http://localhost:3001'
+    this.url = 'https://spotify-viz-api.herokuapp.com'
+    // this.url = 'http://localhost:3001'
 
     this.state = {
       loggedIn: false
