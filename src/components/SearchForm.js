@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import SearchResults from './SearchResults'
-import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import TextField from 'material-ui/TextField'
+import SearchBar from 'material-ui-search-bar'
 
 class SearchForm extends Component {
   constructor (props) {
@@ -22,11 +23,10 @@ class SearchForm extends Component {
   }
 
   handleChange (event) {
-    this.setState({value: event.target.value})
+    this.setState({value: event})
   }
 
-  handleSubmit (event) {
-    event.preventDefault()
+  handleSubmit () {
     axios.get(this.url, {
       withCredentials: true,
       params: {
@@ -43,7 +43,7 @@ class SearchForm extends Component {
               artist: song.artists[0].name
             })
           })
-          this.setState({results: songs})
+          this.setState({results: songs })
         }
       })
       .catch((error) => {
@@ -55,18 +55,24 @@ class SearchForm extends Component {
   render () {
     if (!this.state.results) {
       return (
-        <form className='search-form' onSubmit={this.handleSubmit}>
-          <input className='search-form--input' name='search' type='text' value={this.state.value} onChange={this.handleChange} />
-          <input className='search-form--submit' label='Submit' type='submit' value='Submit' />
-        </form>
+        <SearchBar
+          className='search-bar'
+          style={{ margin: '0 auto', maxWidth: 800, marginTop: 50}}
+          onSubmit={this.handleSubmit}
+          onChange={this.handleChange}
+          onRequestSearch={this.handleSubmit}
+        />
       )
     }
     return (
       <div>
-        <form className='search-form' onSubmit={this.handleSubmit}>
-          <input className='search-form--input' name='search' type='text' value={this.state.value} onChange={this.handleChange} />
-          <input className='search-form--submit' label='submit' type='submit' value='Submit' />
-        </form>
+        <SearchBar
+          className='search-bar'
+          style={{ margin: '0 auto', maxWidth: 800, marginTop: 50}}
+          onSubmit={this.handleSubmit}
+          onChange={this.handleChange}
+          onRequestSearch={this.handleSubmit}
+        />
         <SearchResults label='Submit' results={this.state.results} />
       </div>
     )

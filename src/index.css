@@ -37,6 +37,7 @@ a {
 .subheader {
   color: #616582;
   font-family: 'Roboto';
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -44,45 +45,24 @@ a {
   color: #7D8DFF;
 }
 
-.search-form {
+.search__form {
   text-align: center;
   margin-top: 5em;
 }
 
-.search-form--input {
-  border: 2px #7D8DFF solid;
-  height: 3em;
-  width: 20em;
-  -webkit-appearance:none;
-}
-
-.search-form--submit {
-  border: 2px #7D8DFF solid;
-  background-color: #7D8DFF;
-  color: #fff;
-  height: 3.6em;
-  width: 7em;
-  padding: 0;
-}
-
-.search-form--input:focus, .search-form--submit:focus {
-  outline:0;
-}
-
-.search-results--container {
-  margin: 0 auto;
+.search-results__container {
+  margin: 20px auto;
   width: 100%;
 }
 
 .search-results--p {
   color: #616582;
   font-family: 'Roboto';
-  margin: 0 auto;
 }
 
-.search-results--ul {
+.search-results__ul {
   padding-right: 2em;
-  text-align: center;
+  cursor: pointer;
 }
 
 .song-data {
@@ -94,6 +74,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
 
 @media screen and (min-width: 800px) {
   .song-link--container {
