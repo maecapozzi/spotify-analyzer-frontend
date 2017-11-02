@@ -35,13 +35,13 @@ class App extends Component {
     if (!this.state.loggedIn) {
       return (
         <div className='login-container'>
-          <Login />
+          <Login url={this.url} />
         </div>
       )
     } else if (this.state.loggedIn) {
       return (
         <div>
-          <Home />
+          <Home url={this.url} />
         </div>
       )
     }

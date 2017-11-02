@@ -1,10 +1,10 @@
 import React from 'react'
 import SpotifyAuthButton from './SpotifyAuthButton'
 
-const Login = () => (
+const Login = ({ url }) => (
   <div>
     <h1 className='header'>Log In</h1>
-    <SpotifyAuthButton />
+    <SpotifyAuthButton url={url} />
   </div>
 )
 

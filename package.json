@@ -10,7 +10,8 @@
     "react-dom": "^15.6.1",
     "react-highcharts": "^12.0.0",
     "react-scripts": "1.0.11",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "standard": "^10.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
