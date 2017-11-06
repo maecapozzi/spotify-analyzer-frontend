@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// let uri = 'https://spotify-viz-api.herokuapp.com'
-let uri = 'http://localhost:3001'
+let uri = 'https://spotify-viz-api.herokuapp.com'
+// let uri = 'http://localhost:3001'
 let url = `${uri}/search?`
 
 export const getSong = value => {
