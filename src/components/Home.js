@@ -53,7 +53,6 @@ class Home extends Component {
   }
 
   handleClick (result) {
-    console.log(result)
     let uri = this.props.url + '/analyze/' + result.id
     axios.get(uri, {
       withCredentials: true
@@ -94,7 +93,7 @@ class Home extends Component {
           />
         </div>
       )
-    } else if (this.state.showSearchResults) { 
+    } else if (this.state.showSearchResults) {
       return (
         <div>
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
@@ -113,17 +112,17 @@ class Home extends Component {
           />
         </div>
       )
-    } else { 
+    } else {
       return (
         <div>
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
-              className='search-bar'
-              style={{ margin: '0 auto', maxWidth: 800, marginTop: 50 }}
-              onSubmit={this.handleSubmit}
-              onChange={this.handleChange}
-              onRequestSearch={this.handleSubmit}
-            />
+            className='search-bar'
+            style={{ margin: '0 auto', maxWidth: 800, marginTop: 50 }}
+            onSubmit={this.handleSubmit}
+            onChange={this.handleChange}
+            onRequestSearch={this.handleSubmit}
+          />
           <div className='song-data'>
             <h3>{this.state.title} by {this.state.artist} </h3>
             <SongData

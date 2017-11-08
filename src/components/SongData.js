@@ -4,16 +4,6 @@ import ReactHighcharts from 'react-highcharts'
 class SongData extends Component {
   constructor (props) {
     super(props)
-
-    this.state = {
-      danceability: props.danceability,
-      acousticness: props.acousticness,
-      energy: props.energy,
-      liveness: props.energy,
-      instrumentalness: props.instrumentalness,
-      speechiness: props.speechiness,
-      valence: props.valence
-    }
   }
 
   render () {
@@ -39,7 +29,7 @@ class SongData extends Component {
         }
       },
       series: [{
-        data: [this.state.danceability, this.state.acousticness, this.state.energy, this.state.liveness, this.state.instrumentalness, this.state.speechiness, this.state.valence]
+        data: [this.props.danceability, this.props.acousticness, this.props.energy, this.props.liveness, this.props.instrumentalness, this.props.speechiness, this.props.valence]
       }]
     }
     return (
