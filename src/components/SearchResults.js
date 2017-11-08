@@ -4,63 +4,24 @@ import axios from 'axios'
 import Paper from 'material-ui/Paper'
 import SongData from './SongData'
 import SongLink from './SongLink'
-
+ 
 class SearchResults extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      title: '',
-      artist: '',
-      danceability: '',
-      acousticness: '',
-      energy: '',
-      liveness: '',
-      instrumentalness: '',
-      loudness: '',
-      speechiness: '',
-      valence: ''
+      displaySearchResults: true
     }
 
-    this.handleClick = this.handleClick.bind(this)
-  }
-
-  handleClick (result) {
-    let uri = this.props.url + '/analyze/' + result.id
-    axios.get(uri, {
-      withCredentials: true
-    })
-    .then((response) => {
-      console.log('clicked')
-      if (response.status === 200) {
-        this.setState({
-          title: result.name,
-          artist: result.artist,
-          danceability: response.data.danceability,
-          acousticness: response.data.acousticness,
-          energy: response.data.energy,
-          liveness: response.data.liveness,
-          instrumentalness: response.data.instrumentalness,
-          loudness: response.data.loudness,
-          speechiness: response.data.speechiness,
-          valence: response.data.valence          
-        })
-      }
-    })
-    .catch((error) => {
-      console.log(error)
-    })
   }
 
   render () {
-    if (!this.state.danceability) {
+    if (this.state.displaySearchResults) {
       return (
         <div className='search-results__container'>
           <Paper style={{ maxWidth: 800, margin: '0 auto', padding: '20px' }}>
             <div className='search-results--p'>
-              {this.props.results.map(result => { 
-                return <SongLink result={result} handleClick={this.handleClick.bind(this, result)} />
-              })}
+              {this.props.results.map(result => <SongLink key={result.id} result={result} handleClick={this.props.handleClick.bind(this, result)} /> )}
             </div>
           </Paper>
         </div>
