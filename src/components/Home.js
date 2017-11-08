@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import SearchResultsContainer from './SearchResultsContainer'
+import SearchResults from './SearchResults'
 import SearchBar from 'material-ui-search-bar'
 
 import { getSong } from '../lib/apiService'
@@ -13,8 +13,7 @@ class Home extends Component {
 
     this.state = {
       value: '',
-      results: '',
-      isHidden: false
+      results: ''
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -65,7 +64,7 @@ class Home extends Component {
           onChange={this.handleChange}
           onRequestSearch={this.handleSubmit}
         />
-        <SearchResultsContainer
+        <SearchResults
           label='Submit'
           results={this.state.results}
           url={this.props.url}
