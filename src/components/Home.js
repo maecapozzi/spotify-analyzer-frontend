@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import SearchResults from './SearchResults'
 import SearchBar from 'material-ui-search-bar'
@@ -14,8 +14,9 @@ class Home extends Component {
     this.url = `${this.props.url}/search?`
 
     this.state = {
+      loadingPage: false,
       value: '',
-      results: '', 
+      results: '',
       danceability: '',
       acousticness: '',
       energy: '',
@@ -31,6 +32,7 @@ class Home extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.setLoadingPage = this.setLoadingPage.bind(this)
   }
 
   handleChange (event) {
@@ -52,25 +54,41 @@ class Home extends Component {
     )
   }
 
+  setLoadingPage () {
+    this.setState({loadingPage: true})
+    setTimeout(() => this.setState({loadingPage: false}), 6000)
+  }
+
   handleClick (result) {
+    this.setLoadingPage()
     let uri = this.props.url + '/analyze/' + result.id
     axios.get(uri, {
       withCredentials: true
     })
     .then((response) => {
+      const audioFeatures = response.data[0]
+      const trackData = response.data[1]
+      const audioAnalysis = response.data[2]
       if (response.status === 200) {
         this.setState({
           title: result.name,
           artist: result.artist,
-          danceability: response.data.danceability,
-          acousticness: response.data.acousticness,
-          energy: response.data.energy,
-          liveness: response.data.liveness,
-          instrumentalness: response.data.instrumentalness,
-          loudness: response.data.loudness,
-          speechiness: response.data.speechiness,
-          valence: response.data.valence, 
-          showSearchResults: false
+          danceability: audioFeatures.danceability,
+          acousticness: audioFeatures.acousticness,
+          energy: audioFeatures.energy,
+          liveness: audioFeatures.liveness,
+          instrumentalness: audioFeatures.instrumentalness,
+          loudness: audioFeatures.loudness,
+          speechiness: audioFeatures.speechiness,
+          valence: audioFeatures.valence,
+          showSearchResults: false,
+          albumLink: trackData.album.external_urls.spotify,
+          popularity: trackData.popularity,
+          albumImages: trackData.album.images,
+          timeSignature: audioAnalysis.track.time_signature,
+          tempo: audioAnalysis.track.tempo,
+          songKey: audioAnalysis.track.key,
+          duration: audioAnalysis.track.duration
         })
       }
     })
@@ -83,6 +101,7 @@ class Home extends Component {
     if (!this.state.results) {
       return (
         <div>
+          <h1>Ear Worm</h1>
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
             className='search-bar'
@@ -93,9 +112,12 @@ class Home extends Component {
           />
         </div>
       )
+    } else if (this.state.loadingPage) {
+      return <h1>Loading Data</h1>
     } else if (this.state.showSearchResults) {
       return (
         <div>
+          <h1>Ear Worm</h1>
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
             className='search-bar'
@@ -115,6 +137,7 @@ class Home extends Component {
     } else {
       return (
         <div>
+          <h1>Ear Worm</h1>
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
             className='search-bar'
@@ -124,8 +147,9 @@ class Home extends Component {
             onRequestSearch={this.handleSubmit}
           />
           <div className='song-data'>
-            <h3>{this.state.title} by {this.state.artist} </h3>
             <SongData
+              title={this.state.title}
+              artist={this.state.artist}
               danceability={this.state.danceability}
               acousticness={this.state.acousticness}
               energy={this.state.energy}
@@ -133,6 +157,14 @@ class Home extends Component {
               instrumentalness={this.state.instrumentalness}
               speechiness={this.state.speechiness}
               valence={this.state.valence}
+              albumLink={this.state.albumLink}
+              popularity={this.state.popularity}
+              albumImages={this.state.albumImages}
+              timeSignature={this.state.timeSignature}
+              tempo={this.state.tempo}
+              songKey={this.state.songKey}
+              loudness={this.state.loudness}
+              duration={this.state.duration}
             />
           </div>
         </div>

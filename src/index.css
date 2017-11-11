@@ -9,6 +9,12 @@ a {
   text-decoration: none;
 }
 
+h1, h3 { 
+  text-align: center;
+  color: #616582;
+  font-family: 'Roboto';
+}
+
 .login-container {
   align-items: center;
   display: flex;
@@ -37,7 +43,6 @@ a {
 .subheader {
   color: #616582;
   font-family: 'Roboto';
-  margin-top: 200px;
   text-align: center;
 }
 
@@ -47,7 +52,7 @@ a {
 
 .search__form {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 .search-results__container {
@@ -66,15 +71,13 @@ a {
 }
 
 .song-data {
-  text-align: center;
   margin: 2em 0;
 }
 
-.chart {
-  display: flex;
-  justify-content: center;
+.card { 
+  margin: 0.5em;
+  padding: 2em;
 }
-
 
 @media screen and (min-width: 800px) {
   .song-link--container {

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import ReactHighcharts from 'react-highcharts'
+import TrackData from './TrackData'
+import ChartKey from './ChartKey'
+import Card from 'material-ui/Card'
+import { Grid, Row, Col } from 'react-flexbox-grid'
+import AudioAnalysis from './AudioAnalysis'
 
 class SongData extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
-    var config = {
+    const config = {
       chart: {
-        type: 'bar',
-        width: 800
+        type: 'bar'
       },
       title: null,
       xAxis: {
@@ -29,12 +29,58 @@ class SongData extends Component {
         }
       },
       series: [{
-        data: [this.props.danceability, this.props.acousticness, this.props.energy, this.props.liveness, this.props.instrumentalness, this.props.speechiness, this.props.valence]
+        data: [
+          this.props.danceability,
+          this.props.acousticness,
+          this.props.energy,
+          this.props.liveness,
+          this.props.instrumentalness,
+          this.props.speechiness,
+          this.props.valence
+        ]
       }]
     }
     return (
-      <div className='chart'>
-        <ReactHighcharts config={config} ref='test' />
+      <div>
+        <Grid fluid>
+          <Row>
+            <Col xs={12} lg={6}>
+              <Card className='card'>
+                <TrackData
+                  title={this.props.title}
+                  artist={this.props.artist}
+                  albumLink={this.props.albumLink}
+                  popularity={this.props.popularity}
+                  albumImages={this.props.albumImages}
+                />
+              </Card>
+            </Col>
+            <Col xs={12} lg={6}>
+              <Card className='card'>
+                <AudioAnalysis
+                  timeSignature={this.props.timeSignature}
+                  tempo={this.props.tempo}
+                  songKey={this.props.songKey}
+                  duration={this.props.duration}
+                />
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} lg={6}>
+              <Card className='card'>
+                <ChartKey />
+              </Card>
+            </Col>
+            <Col xs={12} lg={6}>
+              <Card className='card'>
+                <div className='chart'>
+                  <ReactHighcharts config={config} ref='test' />
+                </div>
+              </Card>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     )
   }
