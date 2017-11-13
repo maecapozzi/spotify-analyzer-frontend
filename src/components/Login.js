@@ -1,12 +1,23 @@
 import React from 'react'
-import SpotifyAuthButton from './SpotifyAuthButton'
+import LoginButton from './LoginButton'
+import Header from './Header'
 
-const Login = ({ url }) => (
+import injectSheet from 'react-jss'
+
+const styles = {
+  h3: {
+    textAlign: 'center',
+    color: '#5A6575',
+    fontFamily: 'Roboto'
+  }
+}
+
+const Login = ({ classes, url }) => (
   <div>
-    <h1 className='header'>Log In</h1>
-    <h3 className='subtitle'>Please log in to get a better glimpse of that song you can't get out of your head.</h3>
-    <SpotifyAuthButton url={url} />
+    <Header string={'Log In'} />
+    <h3 className={classes.h3}>Please log in to get a better glimpse of that song you can't get out of your head.</h3>
+    <LoginButton url={url} />
   </div>
 )
 
-export default Login
+export default injectSheet(styles)(Login)

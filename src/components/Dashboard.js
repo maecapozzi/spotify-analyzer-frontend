@@ -2,17 +2,21 @@ import React, { Component } from 'react'
 import ReactHighcharts from 'react-highcharts'
 import TrackData from './TrackData'
 import ChartKey from './ChartKey'
-import Card from 'material-ui/Card'
 import { Grid, Row, Col } from 'react-flexbox-grid'
 import AudioAnalysis from './AudioAnalysis'
+import DataCard from './DataCard'
 
-class SongData extends Component {
+class Dashboard extends Component {
   render () {
     const config = {
       chart: {
-        type: 'bar'
+        type: 'bar',
+        backgroundColor: '#181A1B'
       },
-      title: null,
+      labels: {
+        color: '#5A6575'
+      },
+      title: 'Audio Features',
       xAxis: {
         categories: ['danceability', 'acousticness', 'energy', 'liveness', 'instrumentalness', 'speechiness', 'valence']
       },
@@ -25,7 +29,7 @@ class SongData extends Component {
       plotOptions: {
         series: {
           colorByPoint: true,
-          colors: ['#7D8DFF']
+          colors: ['#00C457']
         }
       },
       series: [{
@@ -44,8 +48,13 @@ class SongData extends Component {
       <div>
         <Grid fluid>
           <Row>
+            <Col xs={12} lg={12}>
+              <DataCard component={<ReactHighcharts config={config} ref='test' />} />
+            </Col>
+          </Row>
+          <Row>
             <Col xs={12} lg={6}>
-              <Card className='card'>
+              <DataCard component={
                 <TrackData
                   title={this.props.title}
                   artist={this.props.artist}
@@ -53,31 +62,34 @@ class SongData extends Component {
                   popularity={this.props.popularity}
                   albumImages={this.props.albumImages}
                 />
-              </Card>
+              } />
             </Col>
             <Col xs={12} lg={6}>
-              <Card className='card'>
-                <AudioAnalysis
-                  timeSignature={this.props.timeSignature}
-                  tempo={this.props.tempo}
-                  songKey={this.props.songKey}
-                  duration={this.props.duration}
-                />
-              </Card>
+              <DataCard component={<ChartKey />} />
             </Col>
           </Row>
           <Row>
-            <Col xs={12} lg={6}>
-              <Card className='card'>
-                <ChartKey />
-              </Card>
+            <Col xs={12} lg={4}>
+              <DataCard
+                component={
+                  <AudioAnalysis
+                    type={'Time Signature'} value={this.props.timeSignature}
+                  />}
+              />
             </Col>
-            <Col xs={12} lg={6}>
-              <Card className='card'>
-                <div className='chart'>
-                  <ReactHighcharts config={config} ref='test' />
-                </div>
-              </Card>
+            <Col xs={12} lg={4}>
+              <DataCard component={
+                <AudioAnalysis
+                  type={'Tempo'} value={this.props.tempo}
+                />
+              } />
+            </Col>
+            <Col xs={12} lg={4}>
+              <DataCard component={
+                <AudioAnalysis
+                  type={'Duruation'} value={this.props.duration}
+                />
+              } />
             </Col>
           </Row>
         </Grid>
@@ -86,4 +98,4 @@ class SongData extends Component {
   }
 }
 
-export default SongData
+export default Dashboard

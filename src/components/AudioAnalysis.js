@@ -1,12 +1,19 @@
 import React from 'react'
+import injectSheet from 'react-jss'
 
-const AudioAnalysis = ({timeSignature, tempo, songKey, duration}) => (
+const styles = {
+  value: {
+    color: '#00C457'
+  }
+}
+
+const AudioAnalysis = ({classes, type, value}) => (
   <div>
-    <p>Time Signature: {timeSignature}</p>
-    <p>Tempo: {tempo}</p>
-    <p>Key: {songKey}</p>
-    <p>Duration: {duration}</p>
+    <p>
+      <span>{type}: </span>
+      <span className={classes.value}>{value}</span>
+    </p>
   </div>
 )
 
-export default AudioAnalysis
+export default injectSheet(styles)(AudioAnalysis)

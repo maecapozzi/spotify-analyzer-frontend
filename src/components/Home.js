@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import SearchResults from './SearchResults'
 import SearchBar from 'material-ui-search-bar'
-import SongData from './SongData'
+import Dashboard from './Dashboard'
+import Header from './Header'
 
 import { getSong } from '../lib/apiService'
 import { getSongs } from '../lib/searchHelper'
@@ -66,29 +67,31 @@ class Home extends Component {
       withCredentials: true
     })
     .then((response) => {
-      const audioFeatures = response.data[0]
-      const trackData = response.data[1]
-      const audioAnalysis = response.data[2]
       if (response.status === 200) {
+        const responseData = {
+          audioFeatures: response.data[0],
+          trackData: response.data[1],
+          audioAnalysis: response.data[2]
+        }
         this.setState({
           title: result.name,
           artist: result.artist,
-          danceability: audioFeatures.danceability,
-          acousticness: audioFeatures.acousticness,
-          energy: audioFeatures.energy,
-          liveness: audioFeatures.liveness,
-          instrumentalness: audioFeatures.instrumentalness,
-          loudness: audioFeatures.loudness,
-          speechiness: audioFeatures.speechiness,
-          valence: audioFeatures.valence,
+          danceability: responseData.audioFeatures.danceability,
+          acousticness: responseData.audioFeatures.acousticness,
+          energy: responseData.audioFeatures.energy,
+          liveness: responseData.audioFeatures.liveness,
+          instrumentalness: responseData.audioFeatures.instrumentalness,
+          loudness: responseData.audioFeatures.loudness,
+          speechiness: responseData.audioFeatures.speechiness,
+          valence: responseData.audioFeatures.valence,
           showSearchResults: false,
-          albumLink: trackData.album.external_urls.spotify,
-          popularity: trackData.popularity,
-          albumImages: trackData.album.images,
-          timeSignature: audioAnalysis.track.time_signature,
-          tempo: audioAnalysis.track.tempo,
-          songKey: audioAnalysis.track.key,
-          duration: audioAnalysis.track.duration
+          albumLink: responseData.trackData.album.external_urls.spotify,
+          popularity: responseData.trackData.popularity,
+          albumImages: responseData.trackData.album.images,
+          timeSignature: responseData.audioAnalysis.track.time_signature,
+          tempo: responseData.audioAnalysis.track.tempo,
+          songKey: responseData.audioAnalysis.track.key,
+          duration: responseData.audioAnalysis.track.duration
         })
       }
     })
@@ -101,11 +104,14 @@ class Home extends Component {
     if (!this.state.results) {
       return (
         <div>
-          <h1>Ear Worm</h1>
+          <Header string={'earworm'} />
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
-            className='search-bar'
-            style={{ margin: '0 auto', maxWidth: 800, marginTop: 50 }}
+            style={{
+              margin: '0 auto',
+              maxWidth: 800,
+              marginTop: 50
+            }}
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}
             onRequestSearch={this.handleSubmit}
@@ -113,15 +119,18 @@ class Home extends Component {
         </div>
       )
     } else if (this.state.loadingPage) {
-      return <h1>Loading Data</h1>
+      return <h1 className='loading-data'>Loading Data</h1>
     } else if (this.state.showSearchResults) {
       return (
         <div>
-          <h1>Ear Worm</h1>
+          <Header string={'earworm'} />
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
-            className='search-bar'
-            style={{ margin: '0 auto', maxWidth: 800, marginTop: 50 }}
+            style={{
+              margin: '0 auto',
+              maxWidth: 800,
+              marginTop: 50
+            }}
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}
             onRequestSearch={this.handleSubmit}
@@ -137,17 +146,21 @@ class Home extends Component {
     } else {
       return (
         <div>
-          <h1>Ear Worm</h1>
+          <Header string={'earworm'} />
           <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
           <SearchBar
             className='search-bar'
-            style={{ margin: '0 auto', maxWidth: 800, marginTop: 50 }}
+            style={{
+              margin: '0 auto',
+              maxWidth: 800,
+              marginTop: 50
+            }}
             onSubmit={this.handleSubmit}
             onChange={this.handleChange}
             onRequestSearch={this.handleSubmit}
           />
           <div className='song-data'>
-            <SongData
+            <Dashboard
               title={this.state.title}
               artist={this.state.artist}
               danceability={this.state.danceability}

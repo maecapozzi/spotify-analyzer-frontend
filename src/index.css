@@ -1,58 +1,40 @@
-body {
+ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #272B2D;
 }
 
-a {
-  font-family: 'Roboto';
-  text-decoration: none;
-}
-
-h1, h3 { 
-  text-align: center;
-  color: #616582;
-  font-family: 'Roboto';
-}
-
-.login-container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 2em;
-}
-
-.login-button {
-  background-color: #7D8DFF;
-  border: none;
-  color: white;
-  font-size: 1em;
-  height: 4em;
-  width: 20em;
-  margin: 2em;
+p { 
+  color: #5A6575;
 }
 
 .header {
-  color: #7D8DFF;
+  color: #00C457;
   font-family: 'Roboto';
   font-size: 3em;
-  margin-left: 0.5em;
 }
 
 .subheader {
-  color: #616582;
+  color: #5A6575;
   font-family: 'Roboto';
   text-align: center;
 }
 
 .home-button {
-  color: #7D8DFF;
+  color: #00C457;
 }
 
 .search__form {
+  background-color: #181A1B;
+  color: #00C457;
   text-align: center;
   margin-top: 2em;
+}
+
+.search-bar { 
+  color: white;
+  background-color: #272B2D; 
 }
 
 .search-results__container {
@@ -61,7 +43,7 @@ h1, h3 {
 }
 
 .search-results--p {
-  color: #616582;
+  color: #5A6575;
   font-family: 'Roboto';
 }
 
@@ -70,13 +52,13 @@ h1, h3 {
   cursor: pointer;
 }
 
-.song-data {
-  margin: 2em 0;
+.loading-data {
+  text-align: center; 
+  color: #00C457;
 }
 
-.card { 
-  margin: 0.5em;
-  padding: 2em;
+.song-data {
+  margin: 2em 0;
 }
 
 @media screen and (min-width: 800px) {
