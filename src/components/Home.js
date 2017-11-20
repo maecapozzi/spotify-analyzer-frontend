@@ -34,6 +34,9 @@ class Home extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.setLoadingPage = this.setLoadingPage.bind(this)
+    this.setHome = this.setHome.bind(this)
+    this.setDashboard = this.setDashboard.bind(this)
+    this.setLoadingScreen = this.setLoadingScreen.bind(this)
   }
 
   handleChange (event) {
@@ -100,41 +103,67 @@ class Home extends Component {
     })
   }
 
+  setHome () {
+    return (
+      <div>
+        <Header string={'earworm'} />
+        <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
+        <SearchBar
+          style={{
+            margin: '0 auto',
+            maxWidth: 800,
+            marginTop: 50
+          }}
+          onSubmit={this.handleSubmit}
+          onChange={this.handleChange}
+          onRequestSearch={this.handleSubmit}
+          />
+      </div>
+    )
+  }
+
+  setDashboard () {
+    return (
+      <div>
+        {this.setHome()}
+        <div className='song-data'>
+          <Dashboard
+            title={this.state.title}
+            artist={this.state.artist}
+            danceability={this.state.danceability}
+            acousticness={this.state.acousticness}
+            energy={this.state.energy}
+            liveness={this.state.liveness}
+            instrumentalness={this.state.instrumentalness}
+            speechiness={this.state.speechiness}
+            valence={this.state.valence}
+            albumLink={this.state.albumLink}
+            popularity={this.state.popularity}
+            albumImages={this.state.albumImages}
+            timeSignature={this.state.timeSignature}
+            tempo={this.state.tempo}
+            songKey={this.state.songKey}
+            loudness={this.state.loudness}
+            duration={this.state.duration}
+            />
+        </div>
+      </div>
+    )
+  }
+
+  setLoadingScreen () {
+    return <h1 className='loading-data'>Loading Data</h1>
+  }
+
   render () {
     if (!this.state.results) {
-      return (
-        <div>
-          <Header string={'earworm'} />
-          <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
-          <SearchBar
-            style={{
-              margin: '0 auto',
-              maxWidth: 800,
-              marginTop: 50
-            }}
-            onSubmit={this.handleSubmit}
-            onChange={this.handleChange}
-            onRequestSearch={this.handleSubmit}
-          />
-        </div>
-      )
+      return this.setHome()
     } else if (this.state.loadingPage) {
-      return <h1 className='loading-data'>Loading Data</h1>
+      return this.setLoadingScreen()
     } else if (this.state.showSearchResults) {
       return (
         <div>
-          <Header string={'earworm'} />
-          <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
-          <SearchBar
-            style={{
-              margin: '0 auto',
-              maxWidth: 800,
-              marginTop: 50
-            }}
-            onSubmit={this.handleSubmit}
-            onChange={this.handleChange}
-            onRequestSearch={this.handleSubmit}
-          />
+          {this.setHome()}
           <SearchResults
             handleClick={this.handleClick.bind(this)}
             label='Submit'
@@ -144,44 +173,7 @@ class Home extends Component {
         </div>
       )
     } else {
-      return (
-        <div>
-          <Header string={'earworm'} />
-          <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
-          <SearchBar
-            className='search-bar'
-            style={{
-              margin: '0 auto',
-              maxWidth: 800,
-              marginTop: 50
-            }}
-            onSubmit={this.handleSubmit}
-            onChange={this.handleChange}
-            onRequestSearch={this.handleSubmit}
-          />
-          <div className='song-data'>
-            <Dashboard
-              title={this.state.title}
-              artist={this.state.artist}
-              danceability={this.state.danceability}
-              acousticness={this.state.acousticness}
-              energy={this.state.energy}
-              liveness={this.state.liveness}
-              instrumentalness={this.state.instrumentalness}
-              speechiness={this.state.speechiness}
-              valence={this.state.valence}
-              albumLink={this.state.albumLink}
-              popularity={this.state.popularity}
-              albumImages={this.state.albumImages}
-              timeSignature={this.state.timeSignature}
-              tempo={this.state.tempo}
-              songKey={this.state.songKey}
-              loudness={this.state.loudness}
-              duration={this.state.duration}
-            />
-          </div>
-        </div>
-      )
+      return this.setDashboard()
     }
   }
 }
