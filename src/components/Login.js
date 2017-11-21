@@ -1,16 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import LoginButton from './LoginButton'
 import Header from './Header'
 
 import injectSheet from 'react-jss'
-
-const styles = {
-  h3: {
-    textAlign: 'center',
-    color: '#5A6575',
-    fontFamily: 'Roboto'
-  }
-}
 
 const Login = ({ classes, url }) => (
   <div>
@@ -19,5 +12,17 @@ const Login = ({ classes, url }) => (
     <LoginButton url={url} />
   </div>
 )
+
+Login.PropTypes = {
+  url: PropTypes.string
+}
+
+const styles = {
+  h3: {
+    textAlign: 'center',
+    color: '#5A6575',
+    fontFamily: 'Roboto'
+  }
+}
 
 export default injectSheet(styles)(Login)

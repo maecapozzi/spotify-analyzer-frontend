@@ -1,0 +1,1715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Dashboard
+    acousticness={0.222}
+    albumImages={
+        Object {
+            "0": Object {
+              "height": 640,
+              "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+              "width": 640,
+            },
+            "1": Object {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+              "width": 300,
+            },
+            "2": Object {
+              "height": 64,
+              "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+              "width": 64,
+            },
+          }
+    }
+    albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+    artist="Luis Fonsi"
+    danceability={0.63}
+    energy={0.815}
+    instrumentalness={0}
+    liveness={0.091}
+    popularity={83}
+    songKey={2}
+    speechiness={0.152}
+    tempo={0.152}
+    timeSignature={4}
+    title="Despacito - Remix"
+    valence={0.813}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <Grid
+        fluid={true}
+>
+        <Row>
+                <Col
+                        lg={12}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={
+                                        <HighchartsChart
+                                                config={
+                                                        Object {
+                                                                "chart": Object {
+                                                                  "backgroundColor": "#181A1B",
+                                                                  "type": "bar",
+                                                                },
+                                                                "labels": Object {
+                                                                  "color": "#5A6575",
+                                                                },
+                                                                "plotOptions": Object {
+                                                                  "series": Object {
+                                                                    "colorByPoint": true,
+                                                                    "colors": Array [
+                                                                      "#00C457",
+                                                                    ],
+                                                                  },
+                                                                },
+                                                                "series": Array [
+                                                                  Object {
+                                                                    "data": Array [
+                                                                      0.63,
+                                                                      0.222,
+                                                                      0.815,
+                                                                      0.091,
+                                                                      0,
+                                                                      0.152,
+                                                                      0.813,
+                                                                    ],
+                                                                  },
+                                                                ],
+                                                                "title": "Audio Features",
+                                                                "xAxis": Object {
+                                                                  "categories": Array [
+                                                                    "danceability",
+                                                                    "acousticness",
+                                                                    "energy",
+                                                                    "liveness",
+                                                                    "instrumentalness",
+                                                                    "speechiness",
+                                                                    "valence",
+                                                                  ],
+                                                                },
+                                                                "yAxis": Object {
+                                                                  "max": 1,
+                                                                  "title": Object {
+                                                                    "text": null,
+                                                                  },
+                                                                },
+                                                              }
+                                                }
+                                        />
+                                }
+                        />
+                </Col>
+        </Row>
+        <Row>
+                <Col
+                        lg={6}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={
+                                        <Jss(TrackData)
+                                                albumImages={
+                                                        Object {
+                                                                "0": Object {
+                                                                  "height": 640,
+                                                                  "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                  "width": 640,
+                                                                },
+                                                                "1": Object {
+                                                                  "height": 300,
+                                                                  "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                  "width": 300,
+                                                                },
+                                                                "2": Object {
+                                                                  "height": 64,
+                                                                  "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                  "width": 64,
+                                                                },
+                                                              }
+                                                }
+                                                albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                artist="Luis Fonsi"
+                                                popularity={83}
+                                                title="Despacito - Remix"
+                                        />
+                                }
+                        />
+                </Col>
+                <Col
+                        lg={6}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={<ChartKey />}
+                        />
+                </Col>
+        </Row>
+        <Row>
+                <Col
+                        lg={4}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={
+                                        <Jss(AudioAnalysis)
+                                                type="Time Signature"
+                                                value={4}
+                                        />
+                                }
+                        />
+                </Col>
+                <Col
+                        lg={4}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={
+                                        <Jss(AudioAnalysis)
+                                                type="Tempo"
+                                                value={0.152}
+                                        />
+                                }
+                        />
+                </Col>
+                <Col
+                        lg={4}
+                        xs={12}
+                >
+                        <Jss(DataCard)
+                                component={
+                                        <Jss(AudioAnalysis)
+                                                type="Duration"
+                                                value={undefined}
+                                        />
+                                }
+                        />
+                </Col>
+        </Row>
+</Grid>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row>
+            <Col
+                        lg={12}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={
+                                                <HighchartsChart
+                                                            config={
+                                                                        Object {
+                                                                                    "chart": Object {
+                                                                                      "backgroundColor": "#181A1B",
+                                                                                      "type": "bar",
+                                                                                    },
+                                                                                    "labels": Object {
+                                                                                      "color": "#5A6575",
+                                                                                    },
+                                                                                    "plotOptions": Object {
+                                                                                      "series": Object {
+                                                                                        "colorByPoint": true,
+                                                                                        "colors": Array [
+                                                                                          "#00C457",
+                                                                                        ],
+                                                                                      },
+                                                                                    },
+                                                                                    "series": Array [
+                                                                                      Object {
+                                                                                        "data": Array [
+                                                                                          0.63,
+                                                                                          0.222,
+                                                                                          0.815,
+                                                                                          0.091,
+                                                                                          0,
+                                                                                          0.152,
+                                                                                          0.813,
+                                                                                        ],
+                                                                                      },
+                                                                                    ],
+                                                                                    "title": "Audio Features",
+                                                                                    "xAxis": Object {
+                                                                                      "categories": Array [
+                                                                                        "danceability",
+                                                                                        "acousticness",
+                                                                                        "energy",
+                                                                                        "liveness",
+                                                                                        "instrumentalness",
+                                                                                        "speechiness",
+                                                                                        "valence",
+                                                                                      ],
+                                                                                    },
+                                                                                    "yAxis": Object {
+                                                                                      "max": 1,
+                                                                                      "title": Object {
+                                                                                        "text": null,
+                                                                                      },
+                                                                                    },
+                                                                                  }
+                                                            }
+                                                />
+                                    }
+                        />
+            </Col>
+</Row>,
+          <Row>
+            <Col
+                        lg={6}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={
+                                                <Jss(TrackData)
+                                                            albumImages={
+                                                                        Object {
+                                                                                    "0": Object {
+                                                                                      "height": 640,
+                                                                                      "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                      "width": 640,
+                                                                                    },
+                                                                                    "1": Object {
+                                                                                      "height": 300,
+                                                                                      "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                      "width": 300,
+                                                                                    },
+                                                                                    "2": Object {
+                                                                                      "height": 64,
+                                                                                      "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                      "width": 64,
+                                                                                    },
+                                                                                  }
+                                                            }
+                                                            albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                            artist="Luis Fonsi"
+                                                            popularity={83}
+                                                            title="Despacito - Remix"
+                                                />
+                                    }
+                        />
+            </Col>
+            <Col
+                        lg={6}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={<ChartKey />}
+                        />
+            </Col>
+</Row>,
+          <Row>
+            <Col
+                        lg={4}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={
+                                                <Jss(AudioAnalysis)
+                                                            type="Time Signature"
+                                                            value={4}
+                                                />
+                                    }
+                        />
+            </Col>
+            <Col
+                        lg={4}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={
+                                                <Jss(AudioAnalysis)
+                                                            type="Tempo"
+                                                            value={0.152}
+                                                />
+                                    }
+                        />
+            </Col>
+            <Col
+                        lg={4}
+                        xs={12}
+            >
+                        <Jss(DataCard)
+                                    component={
+                                                <Jss(AudioAnalysis)
+                                                            type="Duration"
+                                                            value={undefined}
+                                                />
+                                    }
+                        />
+            </Col>
+</Row>,
+        ],
+        "fluid": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Col
+              lg={12}
+              xs={12}
+>
+              <Jss(DataCard)
+                            component={
+                                          <HighchartsChart
+                                                        config={
+                                                                      Object {
+                                                                                    "chart": Object {
+                                                                                      "backgroundColor": "#181A1B",
+                                                                                      "type": "bar",
+                                                                                    },
+                                                                                    "labels": Object {
+                                                                                      "color": "#5A6575",
+                                                                                    },
+                                                                                    "plotOptions": Object {
+                                                                                      "series": Object {
+                                                                                        "colorByPoint": true,
+                                                                                        "colors": Array [
+                                                                                          "#00C457",
+                                                                                        ],
+                                                                                      },
+                                                                                    },
+                                                                                    "series": Array [
+                                                                                      Object {
+                                                                                        "data": Array [
+                                                                                          0.63,
+                                                                                          0.222,
+                                                                                          0.815,
+                                                                                          0.091,
+                                                                                          0,
+                                                                                          0.152,
+                                                                                          0.813,
+                                                                                        ],
+                                                                                      },
+                                                                                    ],
+                                                                                    "title": "Audio Features",
+                                                                                    "xAxis": Object {
+                                                                                      "categories": Array [
+                                                                                        "danceability",
+                                                                                        "acousticness",
+                                                                                        "energy",
+                                                                                        "liveness",
+                                                                                        "instrumentalness",
+                                                                                        "speechiness",
+                                                                                        "valence",
+                                                                                      ],
+                                                                                    },
+                                                                                    "yAxis": Object {
+                                                                                      "max": 1,
+                                                                                      "title": Object {
+                                                                                        "text": null,
+                                                                                      },
+                                                                                    },
+                                                                                  }
+                                                        }
+                                          />
+                            }
+              />
+</Col>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Jss(DataCard)
+                component={
+                                <HighchartsChart
+                                                config={
+                                                                Object {
+                                                                                "chart": Object {
+                                                                                  "backgroundColor": "#181A1B",
+                                                                                  "type": "bar",
+                                                                                },
+                                                                                "labels": Object {
+                                                                                  "color": "#5A6575",
+                                                                                },
+                                                                                "plotOptions": Object {
+                                                                                  "series": Object {
+                                                                                    "colorByPoint": true,
+                                                                                    "colors": Array [
+                                                                                      "#00C457",
+                                                                                    ],
+                                                                                  },
+                                                                                },
+                                                                                "series": Array [
+                                                                                  Object {
+                                                                                    "data": Array [
+                                                                                      0.63,
+                                                                                      0.222,
+                                                                                      0.815,
+                                                                                      0.091,
+                                                                                      0,
+                                                                                      0.152,
+                                                                                      0.813,
+                                                                                    ],
+                                                                                  },
+                                                                                ],
+                                                                                "title": "Audio Features",
+                                                                                "xAxis": Object {
+                                                                                  "categories": Array [
+                                                                                    "danceability",
+                                                                                    "acousticness",
+                                                                                    "energy",
+                                                                                    "liveness",
+                                                                                    "instrumentalness",
+                                                                                    "speechiness",
+                                                                                    "valence",
+                                                                                  ],
+                                                                                },
+                                                                                "yAxis": Object {
+                                                                                  "max": 1,
+                                                                                  "title": Object {
+                                                                                    "text": null,
+                                                                                  },
+                                                                                },
+                                                                              }
+                                                }
+                                />
+                }
+/>,
+              "lg": 12,
+              "xs": 12,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": <HighchartsChart
+                  config={
+                                    Object {
+                                                      "chart": Object {
+                                                        "backgroundColor": "#181A1B",
+                                                        "type": "bar",
+                                                      },
+                                                      "labels": Object {
+                                                        "color": "#5A6575",
+                                                      },
+                                                      "plotOptions": Object {
+                                                        "series": Object {
+                                                          "colorByPoint": true,
+                                                          "colors": Array [
+                                                            "#00C457",
+                                                          ],
+                                                        },
+                                                      },
+                                                      "series": Array [
+                                                        Object {
+                                                          "data": Array [
+                                                            0.63,
+                                                            0.222,
+                                                            0.815,
+                                                            0.091,
+                                                            0,
+                                                            0.152,
+                                                            0.813,
+                                                          ],
+                                                        },
+                                                      ],
+                                                      "title": "Audio Features",
+                                                      "xAxis": Object {
+                                                        "categories": Array [
+                                                          "danceability",
+                                                          "acousticness",
+                                                          "energy",
+                                                          "liveness",
+                                                          "instrumentalness",
+                                                          "speechiness",
+                                                          "valence",
+                                                        ],
+                                                      },
+                                                      "yAxis": Object {
+                                                        "max": 1,
+                                                        "title": Object {
+                                                          "text": null,
+                                                        },
+                                                      },
+                                                    }
+                  }
+/>,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg={6}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={
+                                                <Jss(TrackData)
+                                                                albumImages={
+                                                                                Object {
+                                                                                                "0": Object {
+                                                                                                  "height": 640,
+                                                                                                  "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                                  "width": 640,
+                                                                                                },
+                                                                                                "1": Object {
+                                                                                                  "height": 300,
+                                                                                                  "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                                  "width": 300,
+                                                                                                },
+                                                                                                "2": Object {
+                                                                                                  "height": 64,
+                                                                                                  "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                                  "width": 64,
+                                                                                                },
+                                                                                              }
+                                                                }
+                                                                albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                                artist="Luis Fonsi"
+                                                                popularity={83}
+                                                                title="Despacito - Remix"
+                                                />
+                                }
+                />
+</Col>,
+              <Col
+                lg={6}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={<ChartKey />}
+                />
+</Col>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={
+                                    <Jss(TrackData)
+                                                      albumImages={
+                                                                        Object {
+                                                                                          "0": Object {
+                                                                                            "height": 640,
+                                                                                            "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                            "width": 640,
+                                                                                          },
+                                                                                          "1": Object {
+                                                                                            "height": 300,
+                                                                                            "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                            "width": 300,
+                                                                                          },
+                                                                                          "2": Object {
+                                                                                            "height": 64,
+                                                                                            "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                            "width": 64,
+                                                                                          },
+                                                                                        }
+                                                      }
+                                                      albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                      artist="Luis Fonsi"
+                                                      popularity={83}
+                                                      title="Despacito - Remix"
+                                    />
+                  }
+/>,
+                "lg": 6,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <Jss(TrackData)
+                    albumImages={
+                                        Object {
+                                                            "0": Object {
+                                                              "height": 640,
+                                                              "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                              "width": 640,
+                                                            },
+                                                            "1": Object {
+                                                              "height": 300,
+                                                              "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                              "width": 300,
+                                                            },
+                                                            "2": Object {
+                                                              "height": 64,
+                                                              "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                              "width": 64,
+                                                            },
+                                                          }
+                    }
+                    albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                    artist="Luis Fonsi"
+                    popularity={83}
+                    title="Despacito - Remix"
+/>,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={<ChartKey />}
+/>,
+                "lg": 6,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <ChartKey />,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg={4}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={
+                                                <Jss(AudioAnalysis)
+                                                                type="Time Signature"
+                                                                value={4}
+                                                />
+                                }
+                />
+</Col>,
+              <Col
+                lg={4}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={
+                                                <Jss(AudioAnalysis)
+                                                                type="Tempo"
+                                                                value={0.152}
+                                                />
+                                }
+                />
+</Col>,
+              <Col
+                lg={4}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={
+                                                <Jss(AudioAnalysis)
+                                                                type="Duration"
+                                                                value={undefined}
+                                                />
+                                }
+                />
+</Col>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={
+                                    <Jss(AudioAnalysis)
+                                                      type="Time Signature"
+                                                      value={4}
+                                    />
+                  }
+/>,
+                "lg": 4,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <Jss(AudioAnalysis)
+                    type="Time Signature"
+                    value={4}
+/>,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={
+                                    <Jss(AudioAnalysis)
+                                                      type="Tempo"
+                                                      value={0.152}
+                                    />
+                  }
+/>,
+                "lg": 4,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <Jss(AudioAnalysis)
+                    type="Tempo"
+                    value={0.152}
+/>,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={
+                                    <Jss(AudioAnalysis)
+                                                      type="Duration"
+                                                      value={undefined}
+                                    />
+                  }
+/>,
+                "lg": 4,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <Jss(AudioAnalysis)
+                    type="Duration"
+                    value={undefined}
+/>,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <Grid
+          fluid={true}
+>
+          <Row>
+                    <Col
+                              lg={12}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={
+                                                  <HighchartsChart
+                                                            config={
+                                                                      Object {
+                                                                                "chart": Object {
+                                                                                  "backgroundColor": "#181A1B",
+                                                                                  "type": "bar",
+                                                                                },
+                                                                                "labels": Object {
+                                                                                  "color": "#5A6575",
+                                                                                },
+                                                                                "plotOptions": Object {
+                                                                                  "series": Object {
+                                                                                    "colorByPoint": true,
+                                                                                    "colors": Array [
+                                                                                      "#00C457",
+                                                                                    ],
+                                                                                  },
+                                                                                },
+                                                                                "series": Array [
+                                                                                  Object {
+                                                                                    "data": Array [
+                                                                                      0.63,
+                                                                                      0.222,
+                                                                                      0.815,
+                                                                                      0.091,
+                                                                                      0,
+                                                                                      0.152,
+                                                                                      0.813,
+                                                                                    ],
+                                                                                  },
+                                                                                ],
+                                                                                "title": "Audio Features",
+                                                                                "xAxis": Object {
+                                                                                  "categories": Array [
+                                                                                    "danceability",
+                                                                                    "acousticness",
+                                                                                    "energy",
+                                                                                    "liveness",
+                                                                                    "instrumentalness",
+                                                                                    "speechiness",
+                                                                                    "valence",
+                                                                                  ],
+                                                                                },
+                                                                                "yAxis": Object {
+                                                                                  "max": 1,
+                                                                                  "title": Object {
+                                                                                    "text": null,
+                                                                                  },
+                                                                                },
+                                                                              }
+                                                            }
+                                                  />
+                                        }
+                              />
+                    </Col>
+          </Row>
+          <Row>
+                    <Col
+                              lg={6}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={
+                                                  <Jss(TrackData)
+                                                            albumImages={
+                                                                      Object {
+                                                                                "0": Object {
+                                                                                  "height": 640,
+                                                                                  "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                  "width": 640,
+                                                                                },
+                                                                                "1": Object {
+                                                                                  "height": 300,
+                                                                                  "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                  "width": 300,
+                                                                                },
+                                                                                "2": Object {
+                                                                                  "height": 64,
+                                                                                  "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                  "width": 64,
+                                                                                },
+                                                                              }
+                                                            }
+                                                            albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                            artist="Luis Fonsi"
+                                                            popularity={83}
+                                                            title="Despacito - Remix"
+                                                  />
+                                        }
+                              />
+                    </Col>
+                    <Col
+                              lg={6}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={<ChartKey />}
+                              />
+                    </Col>
+          </Row>
+          <Row>
+                    <Col
+                              lg={4}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={
+                                                  <Jss(AudioAnalysis)
+                                                            type="Time Signature"
+                                                            value={4}
+                                                  />
+                                        }
+                              />
+                    </Col>
+                    <Col
+                              lg={4}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={
+                                                  <Jss(AudioAnalysis)
+                                                            type="Tempo"
+                                                            value={0.152}
+                                                  />
+                                        }
+                              />
+                    </Col>
+                    <Col
+                              lg={4}
+                              xs={12}
+                    >
+                              <Jss(DataCard)
+                                        component={
+                                                  <Jss(AudioAnalysis)
+                                                            type="Duration"
+                                                            value={undefined}
+                                                  />
+                                        }
+                              />
+                    </Col>
+          </Row>
+</Grid>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <Row>
+              <Col
+                            lg={12}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={
+                                                        <HighchartsChart
+                                                                      config={
+                                                                                    Object {
+                                                                                                  "chart": Object {
+                                                                                                    "backgroundColor": "#181A1B",
+                                                                                                    "type": "bar",
+                                                                                                  },
+                                                                                                  "labels": Object {
+                                                                                                    "color": "#5A6575",
+                                                                                                  },
+                                                                                                  "plotOptions": Object {
+                                                                                                    "series": Object {
+                                                                                                      "colorByPoint": true,
+                                                                                                      "colors": Array [
+                                                                                                        "#00C457",
+                                                                                                      ],
+                                                                                                    },
+                                                                                                  },
+                                                                                                  "series": Array [
+                                                                                                    Object {
+                                                                                                      "data": Array [
+                                                                                                        0.63,
+                                                                                                        0.222,
+                                                                                                        0.815,
+                                                                                                        0.091,
+                                                                                                        0,
+                                                                                                        0.152,
+                                                                                                        0.813,
+                                                                                                      ],
+                                                                                                    },
+                                                                                                  ],
+                                                                                                  "title": "Audio Features",
+                                                                                                  "xAxis": Object {
+                                                                                                    "categories": Array [
+                                                                                                      "danceability",
+                                                                                                      "acousticness",
+                                                                                                      "energy",
+                                                                                                      "liveness",
+                                                                                                      "instrumentalness",
+                                                                                                      "speechiness",
+                                                                                                      "valence",
+                                                                                                    ],
+                                                                                                  },
+                                                                                                  "yAxis": Object {
+                                                                                                    "max": 1,
+                                                                                                    "title": Object {
+                                                                                                      "text": null,
+                                                                                                    },
+                                                                                                  },
+                                                                                                }
+                                                                      }
+                                                        />
+                                          }
+                            />
+              </Col>
+</Row>,
+            <Row>
+              <Col
+                            lg={6}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={
+                                                        <Jss(TrackData)
+                                                                      albumImages={
+                                                                                    Object {
+                                                                                                  "0": Object {
+                                                                                                    "height": 640,
+                                                                                                    "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                                    "width": 640,
+                                                                                                  },
+                                                                                                  "1": Object {
+                                                                                                    "height": 300,
+                                                                                                    "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                                    "width": 300,
+                                                                                                  },
+                                                                                                  "2": Object {
+                                                                                                    "height": 64,
+                                                                                                    "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                                    "width": 64,
+                                                                                                  },
+                                                                                                }
+                                                                      }
+                                                                      albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                                      artist="Luis Fonsi"
+                                                                      popularity={83}
+                                                                      title="Despacito - Remix"
+                                                        />
+                                          }
+                            />
+              </Col>
+              <Col
+                            lg={6}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={<ChartKey />}
+                            />
+              </Col>
+</Row>,
+            <Row>
+              <Col
+                            lg={4}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={
+                                                        <Jss(AudioAnalysis)
+                                                                      type="Time Signature"
+                                                                      value={4}
+                                                        />
+                                          }
+                            />
+              </Col>
+              <Col
+                            lg={4}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={
+                                                        <Jss(AudioAnalysis)
+                                                                      type="Tempo"
+                                                                      value={0.152}
+                                                        />
+                                          }
+                            />
+              </Col>
+              <Col
+                            lg={4}
+                            xs={12}
+              >
+                            <Jss(DataCard)
+                                          component={
+                                                        <Jss(AudioAnalysis)
+                                                                      type="Duration"
+                                                                      value={undefined}
+                                                        />
+                                          }
+                            />
+              </Col>
+</Row>,
+          ],
+          "fluid": true,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Col
+                lg={12}
+                xs={12}
+>
+                <Jss(DataCard)
+                                component={
+                                                <HighchartsChart
+                                                                config={
+                                                                                Object {
+                                                                                                "chart": Object {
+                                                                                                  "backgroundColor": "#181A1B",
+                                                                                                  "type": "bar",
+                                                                                                },
+                                                                                                "labels": Object {
+                                                                                                  "color": "#5A6575",
+                                                                                                },
+                                                                                                "plotOptions": Object {
+                                                                                                  "series": Object {
+                                                                                                    "colorByPoint": true,
+                                                                                                    "colors": Array [
+                                                                                                      "#00C457",
+                                                                                                    ],
+                                                                                                  },
+                                                                                                },
+                                                                                                "series": Array [
+                                                                                                  Object {
+                                                                                                    "data": Array [
+                                                                                                      0.63,
+                                                                                                      0.222,
+                                                                                                      0.815,
+                                                                                                      0.091,
+                                                                                                      0,
+                                                                                                      0.152,
+                                                                                                      0.813,
+                                                                                                    ],
+                                                                                                  },
+                                                                                                ],
+                                                                                                "title": "Audio Features",
+                                                                                                "xAxis": Object {
+                                                                                                  "categories": Array [
+                                                                                                    "danceability",
+                                                                                                    "acousticness",
+                                                                                                    "energy",
+                                                                                                    "liveness",
+                                                                                                    "instrumentalness",
+                                                                                                    "speechiness",
+                                                                                                    "valence",
+                                                                                                  ],
+                                                                                                },
+                                                                                                "yAxis": Object {
+                                                                                                  "max": 1,
+                                                                                                  "title": Object {
+                                                                                                    "text": null,
+                                                                                                  },
+                                                                                                },
+                                                                                              }
+                                                                }
+                                                />
+                                }
+                />
+</Col>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Jss(DataCard)
+                  component={
+                                    <HighchartsChart
+                                                      config={
+                                                                        Object {
+                                                                                          "chart": Object {
+                                                                                            "backgroundColor": "#181A1B",
+                                                                                            "type": "bar",
+                                                                                          },
+                                                                                          "labels": Object {
+                                                                                            "color": "#5A6575",
+                                                                                          },
+                                                                                          "plotOptions": Object {
+                                                                                            "series": Object {
+                                                                                              "colorByPoint": true,
+                                                                                              "colors": Array [
+                                                                                                "#00C457",
+                                                                                              ],
+                                                                                            },
+                                                                                          },
+                                                                                          "series": Array [
+                                                                                            Object {
+                                                                                              "data": Array [
+                                                                                                0.63,
+                                                                                                0.222,
+                                                                                                0.815,
+                                                                                                0.091,
+                                                                                                0,
+                                                                                                0.152,
+                                                                                                0.813,
+                                                                                              ],
+                                                                                            },
+                                                                                          ],
+                                                                                          "title": "Audio Features",
+                                                                                          "xAxis": Object {
+                                                                                            "categories": Array [
+                                                                                              "danceability",
+                                                                                              "acousticness",
+                                                                                              "energy",
+                                                                                              "liveness",
+                                                                                              "instrumentalness",
+                                                                                              "speechiness",
+                                                                                              "valence",
+                                                                                            ],
+                                                                                          },
+                                                                                          "yAxis": Object {
+                                                                                            "max": 1,
+                                                                                            "title": Object {
+                                                                                              "text": null,
+                                                                                            },
+                                                                                          },
+                                                                                        }
+                                                      }
+                                    />
+                  }
+/>,
+                "lg": 12,
+                "xs": 12,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": <HighchartsChart
+                    config={
+                                        Object {
+                                                            "chart": Object {
+                                                              "backgroundColor": "#181A1B",
+                                                              "type": "bar",
+                                                            },
+                                                            "labels": Object {
+                                                              "color": "#5A6575",
+                                                            },
+                                                            "plotOptions": Object {
+                                                              "series": Object {
+                                                                "colorByPoint": true,
+                                                                "colors": Array [
+                                                                  "#00C457",
+                                                                ],
+                                                              },
+                                                            },
+                                                            "series": Array [
+                                                              Object {
+                                                                "data": Array [
+                                                                  0.63,
+                                                                  0.222,
+                                                                  0.815,
+                                                                  0.091,
+                                                                  0,
+                                                                  0.152,
+                                                                  0.813,
+                                                                ],
+                                                              },
+                                                            ],
+                                                            "title": "Audio Features",
+                                                            "xAxis": Object {
+                                                              "categories": Array [
+                                                                "danceability",
+                                                                "acousticness",
+                                                                "energy",
+                                                                "liveness",
+                                                                "instrumentalness",
+                                                                "speechiness",
+                                                                "valence",
+                                                              ],
+                                                            },
+                                                            "yAxis": Object {
+                                                              "max": 1,
+                                                              "title": Object {
+                                                                "text": null,
+                                                              },
+                                                            },
+                                                          }
+                    }
+/>,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Col
+                  lg={6}
+                  xs={12}
+>
+                  <Jss(DataCard)
+                                    component={
+                                                      <Jss(TrackData)
+                                                                        albumImages={
+                                                                                          Object {
+                                                                                                            "0": Object {
+                                                                                                              "height": 640,
+                                                                                                              "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                                              "width": 640,
+                                                                                                            },
+                                                                                                            "1": Object {
+                                                                                                              "height": 300,
+                                                                                                              "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                                              "width": 300,
+                                                                                                            },
+                                                                                                            "2": Object {
+                                                                                                              "height": 64,
+                                                                                                              "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                                              "width": 64,
+                                                                                                            },
+                                                                                                          }
+                                                                        }
+                                                                        albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                                        artist="Luis Fonsi"
+                                                                        popularity={83}
+                                                                        title="Despacito - Remix"
+                                                      />
+                                    }
+                  />
+</Col>,
+                <Col
+                  lg={6}
+                  xs={12}
+>
+                  <Jss(DataCard)
+                                    component={<ChartKey />}
+                  />
+</Col>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Jss(DataCard)
+                    component={
+                                        <Jss(TrackData)
+                                                            albumImages={
+                                                                                Object {
+                                                                                                    "0": Object {
+                                                                                                      "height": 640,
+                                                                                                      "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                                                      "width": 640,
+                                                                                                    },
+                                                                                                    "1": Object {
+                                                                                                      "height": 300,
+                                                                                                      "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                                                      "width": 300,
+                                                                                                    },
+                                                                                                    "2": Object {
+                                                                                                      "height": 64,
+                                                                                                      "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                                                      "width": 64,
+                                                                                                    },
+                                                                                                  }
+                                                            }
+                                                            albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                                                            artist="Luis Fonsi"
+                                                            popularity={83}
+                                                            title="Despacito - Remix"
+                                        />
+                    }
+/>,
+                  "lg": 6,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": <Jss(TrackData)
+                      albumImages={
+                                            Object {
+                                                                  "0": Object {
+                                                                    "height": 640,
+                                                                    "url": "https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9",
+                                                                    "width": 640,
+                                                                  },
+                                                                  "1": Object {
+                                                                    "height": 300,
+                                                                    "url": "https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea",
+                                                                    "width": 300,
+                                                                  },
+                                                                  "2": Object {
+                                                                    "height": 64,
+                                                                    "url": "https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3",
+                                                                    "width": 64,
+                                                                  },
+                                                                }
+                      }
+                      albumLink="https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O"
+                      artist="Luis Fonsi"
+                      popularity={83}
+                      title="Despacito - Remix"
+/>,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Jss(DataCard)
+                    component={<ChartKey />}
+/>,
+                  "lg": 6,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": <ChartKey />,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Col
+                  lg={4}
+                  xs={12}
+>
+                  <Jss(DataCard)
+                                    component={
+                                                      <Jss(AudioAnalysis)
+                                                                        type="Time Signature"
+                                                                        value={4}
+                                                      />
+                                    }
+                  />
+</Col>,
+                <Col
+                  lg={4}
+                  xs={12}
+>
+                  <Jss(DataCard)
+                                    component={
+                                                      <Jss(AudioAnalysis)
+                                                                        type="Tempo"
+                                                                        value={0.152}
+                                                      />
+                                    }
+                  />
+</Col>,
+                <Col
+                  lg={4}
+                  xs={12}
+>
+                  <Jss(DataCard)
+                                    component={
+                                                      <Jss(AudioAnalysis)
+                                                                        type="Duration"
+                                                                        value={undefined}
+                                                      />
+                                    }
+                  />
+</Col>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Jss(DataCard)
+                    component={
+                                        <Jss(AudioAnalysis)
+                                                            type="Time Signature"
+                                                            value={4}
+                                        />
+                    }
+/>,
+                  "lg": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": <Jss(AudioAnalysis)
+                      type="Time Signature"
+                      value={4}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Jss(DataCard)
+                    component={
+                                        <Jss(AudioAnalysis)
+                                                            type="Tempo"
+                                                            value={0.152}
+                                        />
+                    }
+/>,
+                  "lg": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": <Jss(AudioAnalysis)
+                      type="Tempo"
+                      value={0.152}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Jss(DataCard)
+                    component={
+                                        <Jss(AudioAnalysis)
+                                                            type="Duration"
+                                                            value={undefined}
+                                        />
+                    }
+/>,
+                  "lg": 4,
+                  "xs": 12,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "component": <Jss(AudioAnalysis)
+                      type="Duration"
+                      value={undefined}
+/>,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

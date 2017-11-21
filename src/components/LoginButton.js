@@ -12,13 +12,14 @@ const styles = {
   loginButton: {
     backgroundColor: '#00C457',
     border: 'none',
+    color: 'white',
+    cursor: 'pointer',
     fontSize: '1em',
     height: '4em',
     width: '20em',
     margin: '2em'
   },
   buttonLink: {
-    color: 'white',
     fontFamily: 'Roboto',
     textDecoration: 'none'
   }
@@ -27,9 +28,11 @@ const styles = {
 const LoginButton = ({ classes, url }) => {
   return (
     <div className={classes.loginContainer}>
-      <button className={classes.loginButton}>
-        <a className={classes.buttonLink} href={`${url}/auth/spotify`}>Login with Spotify</a>
-      </button>
+      <a className={classes.buttonLink} href={`${url}/auth/spotify`}>
+        <button className={classes.loginButton}>
+          Login with Spotify
+        </button>
+      </a>
     </div>
   )
 }

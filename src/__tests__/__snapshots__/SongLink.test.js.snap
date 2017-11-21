@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SongLink
+    handleClick={[Function]}
+    result={
+        Object {
+            "artist": "sgs",
+            "id": "6rPO02ozF3bM7NnOV4h6s2",
+            "name": "sf",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": "6rPO02ozF3bM7NnOV4h6s2",
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        "sf",
+        " by ",
+        "sgs",
+      ],
+      "className": "search-results__ul",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      "sf",
+      " by ",
+      "sgs",
+    ],
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": "6rPO02ozF3bM7NnOV4h6s2",
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          "sf",
+          " by ",
+          "sgs",
+        ],
+        "className": "search-results__ul",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        "sf",
+        " by ",
+        "sgs",
+      ],
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

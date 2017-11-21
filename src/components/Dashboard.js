@@ -87,7 +87,7 @@ class Dashboard extends Component {
             <Col xs={12} lg={4}>
               <DataCard component={
                 <AudioAnalysis
-                  type={'Duruation'} value={this.props.duration}
+                  type={'Duration'} value={this.props.duration}
                 />
               } />
             </Col>

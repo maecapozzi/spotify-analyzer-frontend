@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-eslint": "^7.2.3",
     "dotenv": "^4.0.0",
+    "enzyme": "^3.2.0",
     "flexbox-react": "^4.4.0",
     "highcharts": "^5.0.14",
     "material-ui-search-bar": "^0.4.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "react-flexbox-grid": "^2.0.0",
     "react-highcharts": "^12.0.0",
     "react-jss": "^8.0.0",
@@ -25,18 +28,22 @@
   "proxy": "https://spotify-viz-api.herokuapp.com",
   "devDependencies": {
     "axios": "^0.16.2",
+    "babel-eslint": "^8.0.2",
     "babel-jest": "^21.0.0",
+    "css.escape": "^1.5.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "eslint": "^4.5.0",
     "eslint-plugin-react": "^7.3.0",
     "jest": "^21.0.1",
     "material-ui": "^0.19.1",
-    "react-test-renderer": "^15.6.1",
+    "react-test-renderer": "^15.6.2",
     "regenerator-runtime": "^0.11.0",
     "standard": "^10.0.3"
   },
   "standard": {
     "ignore": [
-      "src/**.test.js"
+      "__tests__/**.test.js"
     ]
   }
 }
