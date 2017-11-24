@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import SearchResults from './SearchResults'
-import SearchBar from 'material-ui-search-bar'
+import PropTypes from 'prop-types'
+
 import Dashboard from './Dashboard'
 import Header from './Header'
+import SearchBar from 'material-ui-search-bar'
+import SearchResults from './SearchResults'
 
 import { getSong } from '../lib/apiService'
 import { getSongs } from '../lib/searchHelper'
@@ -176,6 +178,10 @@ class Home extends Component {
       return this.setDashboard()
     }
   }
+}
+
+Home.propTypes = {
+  url: PropTypes.string
 }
 
 export default Home

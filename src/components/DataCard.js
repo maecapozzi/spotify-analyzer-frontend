@@ -1,6 +1,8 @@
 import React from 'react'
-import Card from 'material-ui/Card'
 import injectSheet from 'react-jss'
+import PropTypes from 'prop-types'
+
+import Card from 'material-ui/Card'
 
 const styles = {
   card: {
@@ -19,4 +21,7 @@ const DataCard = ({classes, component}) => {
   )
 }
 
+DataCard.propTypes = { 
+  component: PropTypes.object
+}
 export default injectSheet(styles)(DataCard)

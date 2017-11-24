@@ -1,5 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
+import PropTypes from 'prop-types'
 
 const styles = {
   value: {
@@ -15,5 +16,10 @@ const AudioAnalysis = ({classes, type, value}) => (
     </p>
   </div>
 )
+
+AudioAnalysis.propTypes = { 
+  type: PropTypes.string,
+  value: PropTypes.number
+}
 
 export default injectSheet(styles)(AudioAnalysis)

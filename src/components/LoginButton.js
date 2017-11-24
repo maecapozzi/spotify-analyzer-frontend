@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import injectSheet from 'react-jss'
 
 const styles = {
@@ -35,6 +36,10 @@ const LoginButton = ({ classes, url }) => {
       </a>
     </div>
   )
+}
+
+LoginButton.propTypes = {
+  url: PropTypes.string
 }
 
 export default injectSheet(styles)(LoginButton)

@@ -49,9 +49,3 @@ ShallowWrapper {
   },
 }
 `;
-
-exports[`renders correctly 1`] = `
-<h1
-  className="Header-h1-0-1"
-/>
-`;

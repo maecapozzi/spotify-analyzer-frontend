@@ -13,7 +13,7 @@ const Login = ({ classes, url }) => (
   </div>
 )
 
-Login.PropTypes = {
+Login.propTypes = {
   url: PropTypes.string
 }
 

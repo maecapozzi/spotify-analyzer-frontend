@@ -1,5 +1,6 @@
 import React from 'react'
 import injectSheet from 'react-jss'
+import PropTypes from 'prop-types'
 
 const styles = {
   h3: {
@@ -15,5 +16,12 @@ const TrackData = ({classes, title, artist, albumLink, albumImages}) => (
     </a>
   </div>
 )
+
+TrackData.propTypes = {
+  title: PropTypes.string, 
+  artist: PropTypes.string, 
+  albumLink: PropTypes.string,
+  albumImages: PropTypes.array
+}
 
 export default injectSheet(styles)(TrackData)

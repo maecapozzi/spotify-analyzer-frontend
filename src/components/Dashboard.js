@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import ReactHighcharts from 'react-highcharts'
-import TrackData from './TrackData'
-import ChartKey from './ChartKey'
+
 import { Grid, Row, Col } from 'react-flexbox-grid'
+import PropTypes from 'prop-types'
+import ReactHighcharts from 'react-highcharts'
+
 import AudioAnalysis from './AudioAnalysis'
+import ChartKey from './ChartKey'
 import DataCard from './DataCard'
+import TrackData from './TrackData'
 
 class Dashboard extends Component {
   render () {
@@ -98,4 +101,21 @@ class Dashboard extends Component {
   }
 }
 
+Dashboard.propTypes = {
+  acousticness: PropTypes.number,
+  albumImages: PropTypes.object,
+  albumLink: PropTypes.string,
+  artist: PropTypes.string,
+  danceability: PropTypes.number,
+  duration: PropTypes.number,
+  energy: PropTypes.number,
+  instrumentalness: PropTypes.number,
+  liveness: PropTypes.number,
+  popularity: PropTypes.number,
+  speechiness: PropTypes.number,
+  timeSignature: PropTypes.number,
+  tempo: PropTypes.number,
+  title: PropTypes.string,
+  valence: PropTypes.number
+}
 export default Dashboard

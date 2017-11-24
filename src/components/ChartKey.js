@@ -11,5 +11,4 @@ const ChartKey = () => (
     <p>Valence: "A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track."</p>
   </div>
 )
-
 export default ChartKey
