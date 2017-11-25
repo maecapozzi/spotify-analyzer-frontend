@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+
+import ErrorBoundary from './components/ErrorBoundary'
 import Home from './components/Home'
 import Login from './components/Login'
 
 class App extends Component {
   constructor (props) {
     super(props)
-
     this.url = 'https://spotify-viz-api.herokuapp.com'
     // this.url = 'http://localhost:3001'
 
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      hasError: false
     }
   }
 
@@ -20,30 +22,40 @@ class App extends Component {
       withCredentials: true
     })
     .then((response) => {
-      if (response.data.isAuthenticated === true) {
-        this.setState({ loggedIn: true })
-      } else {
-        this.setState({ loggedIn: false })
+      if (response.status === 200) {
+        if (response.data.isAuthenticated) {
+          this.setState({ loggedIn: true })
+        } else if (!response.data.isAuthenticated) {
+          this.setState({ loggedIn: false })
+        }
       }
     })
     .catch((error) => {
-      console.log(error)
+      if (error) {
+        this.setState(state => ({ ...state, hasErrors: true }))
+      }
     })
   }
 
   render () {
-    if (!this.state.loggedIn) {
+    if (!this.state.loggedIn && !this.state.hasErrors) {
       return (
         <div className='login-container'>
-          <Login url={this.url} />
+          <ErrorBoundary>
+            <Login url={this.url} />
+          </ErrorBoundary>
         </div>
       )
-    } else if (this.state.loggedIn) {
+    } else if (this.state.loggedIn && !this.state.hasErrors) {
       return (
         <div>
-          <Home url={this.url} />
+          <ErrorBoundary>
+            <Home url={this.url} />
+          </ErrorBoundary>
         </div>
       )
+    } else {
+      return <h1>Something has gone wrong.</h1>
     }
   }
 }

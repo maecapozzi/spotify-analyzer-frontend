@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
+import ErrorBoundary from './ErrorBoundary'
 import Dashboard from './Dashboard'
 import Header from './Header'
 import SearchBar from 'material-ui-search-bar'
@@ -15,7 +16,6 @@ class Home extends Component {
     super(props)
 
     this.url = `${this.props.url}/search?`
-
     this.state = {
       loadingPage: false,
       value: '',
@@ -32,7 +32,7 @@ class Home extends Component {
       artist: '',
       showSearchResults: true
     }
-
+    
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.setLoadingPage = this.setLoadingPage.bind(this)
@@ -129,25 +129,27 @@ class Home extends Component {
       <div>
         {this.setHome()}
         <div className='song-data'>
-          <Dashboard
-            title={this.state.title}
-            artist={this.state.artist}
-            danceability={this.state.danceability}
-            acousticness={this.state.acousticness}
-            energy={this.state.energy}
-            liveness={this.state.liveness}
-            instrumentalness={this.state.instrumentalness}
-            speechiness={this.state.speechiness}
-            valence={this.state.valence}
-            albumLink={this.state.albumLink}
-            popularity={this.state.popularity}
-            albumImages={this.state.albumImages}
-            timeSignature={this.state.timeSignature}
-            tempo={this.state.tempo}
-            songKey={this.state.songKey}
-            loudness={this.state.loudness}
-            duration={this.state.duration}
-            />
+          <ErrorBoundary>
+            <Dashboard
+              title={this.state.title}
+              artist={this.state.artist}
+              danceability={this.state.danceability}
+              acousticness={this.state.acousticness}
+              energy={this.state.energy}
+              liveness={this.state.liveness}
+              instrumentalness={this.state.instrumentalness}
+              speechiness={this.state.speechiness}
+              valence={this.state.valence}
+              albumLink={this.state.albumLink}
+              popularity={this.state.popularity}
+              albumImages={this.state.albumImages}
+              timeSignature={this.state.timeSignature}
+              tempo={this.state.tempo}
+              songKey={this.state.songKey}
+              loudness={this.state.loudness}
+              duration={this.state.duration}
+              />
+          </ErrorBoundary>
         </div>
       </div>
     )
