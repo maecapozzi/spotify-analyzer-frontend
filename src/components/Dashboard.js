@@ -103,7 +103,7 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
   acousticness: PropTypes.number,
-  albumImages: PropTypes.object,
+  albumImages: PropTypes.array,
   albumLink: PropTypes.string,
   artist: PropTypes.string,
   danceability: PropTypes.number,
