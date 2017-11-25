@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
 
-import ErrorBoundary from './ErrorBoundary'
+import BodyCopy from './BodyCopy'
 import Dashboard from './Dashboard'
 import Header from './Header'
 import SearchBar from 'material-ui-search-bar'
@@ -32,7 +32,7 @@ class Home extends Component {
       artist: '',
       showSearchResults: true
     }
-    
+
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.setLoadingPage = this.setLoadingPage.bind(this)
@@ -55,7 +55,7 @@ class Home extends Component {
         }
       })
       .catch((error) => {
-        console.log(error)
+        throw new Error('Could not get a response from the server!')
       }
     )
   }
@@ -108,8 +108,8 @@ class Home extends Component {
   setHome () {
     return (
       <div>
-        <Header string={'earworm'} />
-        <h3 className='subheader'>Search for a song on Spotify and view the audio features of that song.</h3>
+        <Header string={'EARWORM'} />
+        <BodyCopy string={'Search for a song on Spotify and view the audio features of that song'} />
         <SearchBar
           style={{
             margin: '0 auto',
@@ -129,27 +129,25 @@ class Home extends Component {
       <div>
         {this.setHome()}
         <div className='song-data'>
-          <ErrorBoundary>
-            <Dashboard
-              title={this.state.title}
-              artist={this.state.artist}
-              danceability={this.state.danceability}
-              acousticness={this.state.acousticness}
-              energy={this.state.energy}
-              liveness={this.state.liveness}
-              instrumentalness={this.state.instrumentalness}
-              speechiness={this.state.speechiness}
-              valence={this.state.valence}
-              albumLink={this.state.albumLink}
-              popularity={this.state.popularity}
-              albumImages={this.state.albumImages}
-              timeSignature={this.state.timeSignature}
-              tempo={this.state.tempo}
-              songKey={this.state.songKey}
-              loudness={this.state.loudness}
-              duration={this.state.duration}
-              />
-          </ErrorBoundary>
+          <Dashboard
+            title={this.state.title}
+            artist={this.state.artist}
+            danceability={this.state.danceability}
+            acousticness={this.state.acousticness}
+            energy={this.state.energy}
+            liveness={this.state.liveness}
+            instrumentalness={this.state.instrumentalness}
+            speechiness={this.state.speechiness}
+            valence={this.state.valence}
+            albumLink={this.state.albumLink}
+            popularity={this.state.popularity}
+            albumImages={this.state.albumImages}
+            timeSignature={this.state.timeSignature}
+            tempo={this.state.tempo}
+            songKey={this.state.songKey}
+            loudness={this.state.loudness}
+            duration={this.state.duration}
+            />
         </div>
       </div>
     )

@@ -4,7 +4,7 @@ exports[`it renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Jss(Login)
+  Symbol(enzyme.__unrendered__): <Login
     url="http://localhost:3001"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -17,31 +17,113 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "classes": Object {
-        "h3": "Login-h3-0-1",
-      },
-      "url": "http://localhost:3001",
+      "children": Array [
+        <Jss(Header)
+          string="EARWORM"
+/>,
+        <Jss(BodyCopy)
+          string="Earworm allows you to learn more about the songs you love. Search for old and new favorites and see Spotify data visualizations about them."
+/>,
+        <Jss(LoginButton)
+          url="http://localhost:3001"
+/>,
+      ],
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "string": "EARWORM",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "string": "Earworm allows you to learn more about the songs you love. Search for old and new favorites and see Spotify data visualizations about them.",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "url": "http://localhost:3001",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "classes": Object {
-          "h3": "Login-h3-0-1",
-        },
-        "url": "http://localhost:3001",
+        "children": Array [
+          <Jss(Header)
+            string="EARWORM"
+/>,
+          <Jss(BodyCopy)
+            string="Earworm allows you to learn more about the songs you love. Search for old and new favorites and see Spotify data visualizations about them."
+/>,
+          <Jss(LoginButton)
+            url="http://localhost:3001"
+/>,
+        ],
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "string": "EARWORM",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "string": "Earworm allows you to learn more about the songs you love. Search for old and new favorites and see Spotify data visualizations about them.",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "url": "http://localhost:3001",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

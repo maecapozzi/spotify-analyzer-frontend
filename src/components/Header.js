@@ -5,8 +5,10 @@ import injectSheet from 'react-jss'
 const styles = {
   h1: {
     color: '#00C457',
-    fontFamily: 'Roboto',
-    marginLeft: '1em'
+    fontFamily: 'Inconsolata',
+    fontWeight: '300',
+    letterSpacing: '3px',
+    textAlign: 'center'
   }
 }
 

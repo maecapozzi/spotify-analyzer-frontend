@@ -3,16 +3,16 @@ import { shallow } from 'enzyme'
 import { configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import AudioAnalysis from '../components/AudioAnalysis'
+
+import BodyCopy from '../components/BodyCopy'
 
 configure({ adapter: new Adapter() })
 
 test('it renders correctly', () => {
-  const audioAnalysisProps = {
-    type: 'Time Signature',
-    value: 4
+  const bodyCopyProps = {
+    string: 'This is body copy.'
   }
 
-  const component = shallow(<AudioAnalysis {...audioAnalysisProps} />)
+  const component = shallow(<BodyCopy {...bodyCopyProps} />)
   expect(component).toMatchSnapshot()
 })

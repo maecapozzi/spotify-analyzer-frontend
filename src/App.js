@@ -1,19 +1,30 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-
 import ErrorBoundary from './components/ErrorBoundary'
+import injectSheet from 'react-jss'
+
 import Home from './components/Home'
 import Login from './components/Login'
+
+const styles = {
+  errors: {
+    color: '#00C457',
+    fontFamily: 'Inconsolata',
+    fontWeight: '300',
+    textAlign: 'center'
+  }
+}
 
 class App extends Component {
   constructor (props) {
     super(props)
-    this.url = 'https://spotify-viz-api.herokuapp.com'
-    // this.url = 'http://localhost:3001'
+
+    // this.url = 'https://spotify-viz-api.herokuapp.com'
+    this.url = 'http://localhost:3001'
 
     this.state = {
       loggedIn: false,
-      hasError: false
+      hasErrors: false
     }
   }
 
@@ -35,6 +46,10 @@ class App extends Component {
         this.setState(state => ({ ...state, hasErrors: true }))
       }
     })
+  }
+
+  componentDidCatch (error) {
+    console.log(error)
   }
 
   render () {
@@ -60,4 +75,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default injectSheet(styles)(App)

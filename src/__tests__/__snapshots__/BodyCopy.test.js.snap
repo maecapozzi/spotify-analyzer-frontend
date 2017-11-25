@@ -4,9 +4,8 @@ exports[`it renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Jss(AudioAnalysis)
-    type="Time Signature"
-    value={4}
+  Symbol(enzyme.__unrendered__): <Jss(BodyCopy)
+    string="This is body copy."
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -21,11 +20,9 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "classes": Object {
-        "type": "AudioAnalysis-type-0-1",
-        "value": "AudioAnalysis-value-0-2",
+        "h3": "BodyCopy-h3-0-1",
       },
-      "type": "Time Signature",
-      "value": 4,
+      "string": "This is body copy.",
     },
     "ref": null,
     "rendered": null,
@@ -38,11 +35,9 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "classes": Object {
-          "type": "AudioAnalysis-type-0-1",
-          "value": "AudioAnalysis-value-0-2",
+          "h3": "BodyCopy-h3-0-1",
         },
-        "type": "Time Signature",
-        "value": 4,
+        "string": "This is body copy.",
       },
       "ref": null,
       "rendered": null,

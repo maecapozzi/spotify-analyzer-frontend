@@ -15,10 +15,11 @@ const styles = {
     border: 'none',
     color: 'white',
     cursor: 'pointer',
+    fontFamily: 'Inconsolata',
     fontSize: '1em',
     height: '4em',
     width: '20em',
-    margin: '2em'
+    margin: [20, 20]
   },
   buttonLink: {
     fontFamily: 'Roboto',

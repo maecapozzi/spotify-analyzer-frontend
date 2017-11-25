@@ -4,7 +4,7 @@ exports[`it renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <Jss(App) />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,79 +15,29 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": <Jss(ErrorBoundary)>
-        <Jss(Login)
-                url="https://spotify-viz-api.herokuapp.com"
-        />
-</Jss(ErrorBoundary)>,
-      "className": "login-container",
+      "classes": Object {
+        "errors": "App-errors-0-1",
+      },
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <Jss(Login)
-          url="https://spotify-viz-api.herokuapp.com"
-/>,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "url": "https://spotify-viz-api.herokuapp.com",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      "type": [Function],
-    },
-    "type": "div",
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
-        "children": <Jss(ErrorBoundary)>
-          <Jss(Login)
-                    url="https://spotify-viz-api.herokuapp.com"
-          />
-</Jss(ErrorBoundary)>,
-        "className": "login-container",
+        "classes": Object {
+          "errors": "App-errors-0-1",
+        },
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Jss(Login)
-            url="https://spotify-viz-api.herokuapp.com"
-/>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "url": "https://spotify-viz-api.herokuapp.com",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -4,7 +4,7 @@ exports[`it renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchResults
+  Symbol(enzyme.__unrendered__): <Jss(SearchResults)
     handleClick={[Function]}
     results={
         Array [
@@ -36,411 +36,67 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "function",
     "props": Object {
-      "children": <Paper
-        circle={false}
-        rounded={true}
-        style={
-                Object {
-                        "backgroundColor": "#181A1B",
-                        "margin": "0 auto",
-                        "maxWidth": 800,
-                        "padding": "20px",
-                      }
-        }
-        transitionEnabled={true}
-        zDepth={1}
->
-        <div
-                className="search-results--p"
-        >
-                <SongLink
-                        handleClick={[Function]}
-                        result={
-                                Object {
-                                        "artist": "Luis Fonsi",
-                                        "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                        "name": "Despacito - Remix",
-                                      }
-                        }
-                />
-                <SongLink
-                        handleClick={[Function]}
-                        result={
-                                Object {
-                                        "artist": "Luis Fonsi",
-                                        "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                        "name": "Despacito (Featuring Daddy Yankee)",
-                                      }
-                        }
-                />
-                <SongLink
-                        handleClick={[Function]}
-                        result={
-                                Object {
-                                        "artist": "Madilyn Bailey",
-                                        "id": "4vxA3aI7l73i0Hi819OQhH",
-                                        "name": "Despacito",
-                                      }
-                        }
-                />
-        </div>
-</Paper>,
-      "className": "search-results__container",
+      "classes": Object {
+        "p": "SearchResults-p-0-2",
+        "searchResultsContainer": "SearchResults-searchResultsContainer-0-1",
+      },
+      "handleClick": [Function],
+      "results": Array [
+        Object {
+          "artist": "Luis Fonsi",
+          "id": "6rPO02ozF3bM7NnOV4h6s2",
+          "name": "Despacito - Remix",
+        },
+        Object {
+          "artist": "Luis Fonsi",
+          "id": "7CUYHcu0RnbOnMz4RuN07w",
+          "name": "Despacito (Featuring Daddy Yankee)",
+        },
+        Object {
+          "artist": "Madilyn Bailey",
+          "id": "4vxA3aI7l73i0Hi819OQhH",
+          "name": "Despacito",
+        },
+      ],
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div
-          className="search-results--p"
->
-          <SongLink
-                    handleClick={[Function]}
-                    result={
-                              Object {
-                                        "artist": "Luis Fonsi",
-                                        "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                        "name": "Despacito - Remix",
-                                      }
-                    }
-          />
-          <SongLink
-                    handleClick={[Function]}
-                    result={
-                              Object {
-                                        "artist": "Luis Fonsi",
-                                        "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                        "name": "Despacito (Featuring Daddy Yankee)",
-                                      }
-                    }
-          />
-          <SongLink
-                    handleClick={[Function]}
-                    result={
-                              Object {
-                                        "artist": "Madilyn Bailey",
-                                        "id": "4vxA3aI7l73i0Hi819OQhH",
-                                        "name": "Despacito",
-                                      }
-                    }
-          />
-</div>,
-        "circle": false,
-        "rounded": true,
-        "style": Object {
-          "backgroundColor": "#181A1B",
-          "margin": "0 auto",
-          "maxWidth": 800,
-          "padding": "20px",
-        },
-        "transitionEnabled": true,
-        "zDepth": 1,
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <SongLink
-              handleClick={[Function]}
-              result={
-                            Object {
-                                          "artist": "Luis Fonsi",
-                                          "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                          "name": "Despacito - Remix",
-                                        }
-              }
-/>,
-            <SongLink
-              handleClick={[Function]}
-              result={
-                            Object {
-                                          "artist": "Luis Fonsi",
-                                          "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                          "name": "Despacito (Featuring Daddy Yankee)",
-                                        }
-              }
-/>,
-            <SongLink
-              handleClick={[Function]}
-              result={
-                            Object {
-                                          "artist": "Madilyn Bailey",
-                                          "id": "4vxA3aI7l73i0Hi819OQhH",
-                                          "name": "Despacito",
-                                        }
-              }
-/>,
-          ],
-          "className": "search-results--p",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "6rPO02ozF3bM7NnOV4h6s2",
-            "nodeType": "function",
-            "props": Object {
-              "handleClick": [Function],
-              "result": Object {
-                "artist": "Luis Fonsi",
-                "id": "6rPO02ozF3bM7NnOV4h6s2",
-                "name": "Despacito - Remix",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "7CUYHcu0RnbOnMz4RuN07w",
-            "nodeType": "function",
-            "props": Object {
-              "handleClick": [Function],
-              "result": Object {
-                "artist": "Luis Fonsi",
-                "id": "7CUYHcu0RnbOnMz4RuN07w",
-                "name": "Despacito (Featuring Daddy Yankee)",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "4vxA3aI7l73i0Hi819OQhH",
-            "nodeType": "function",
-            "props": Object {
-              "handleClick": [Function],
-              "result": Object {
-                "artist": "Madilyn Bailey",
-                "id": "4vxA3aI7l73i0Hi819OQhH",
-                "name": "Despacito",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      "type": [Function],
-    },
-    "type": "div",
+    "rendered": null,
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "function",
       "props": Object {
-        "children": <Paper
-          circle={false}
-          rounded={true}
-          style={
-                    Object {
-                              "backgroundColor": "#181A1B",
-                              "margin": "0 auto",
-                              "maxWidth": 800,
-                              "padding": "20px",
-                            }
-          }
-          transitionEnabled={true}
-          zDepth={1}
->
-          <div
-                    className="search-results--p"
-          >
-                    <SongLink
-                              handleClick={[Function]}
-                              result={
-                                        Object {
-                                                  "artist": "Luis Fonsi",
-                                                  "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                                  "name": "Despacito - Remix",
-                                                }
-                              }
-                    />
-                    <SongLink
-                              handleClick={[Function]}
-                              result={
-                                        Object {
-                                                  "artist": "Luis Fonsi",
-                                                  "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                                  "name": "Despacito (Featuring Daddy Yankee)",
-                                                }
-                              }
-                    />
-                    <SongLink
-                              handleClick={[Function]}
-                              result={
-                                        Object {
-                                                  "artist": "Madilyn Bailey",
-                                                  "id": "4vxA3aI7l73i0Hi819OQhH",
-                                                  "name": "Despacito",
-                                                }
-                              }
-                    />
-          </div>
-</Paper>,
-        "className": "search-results__container",
+        "classes": Object {
+          "p": "SearchResults-p-0-2",
+          "searchResultsContainer": "SearchResults-searchResultsContainer-0-1",
+        },
+        "handleClick": [Function],
+        "results": Array [
+          Object {
+            "artist": "Luis Fonsi",
+            "id": "6rPO02ozF3bM7NnOV4h6s2",
+            "name": "Despacito - Remix",
+          },
+          Object {
+            "artist": "Luis Fonsi",
+            "id": "7CUYHcu0RnbOnMz4RuN07w",
+            "name": "Despacito (Featuring Daddy Yankee)",
+          },
+          Object {
+            "artist": "Madilyn Bailey",
+            "id": "4vxA3aI7l73i0Hi819OQhH",
+            "name": "Despacito",
+          },
+        ],
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <div
-            className="search-results--p"
->
-            <SongLink
-                        handleClick={[Function]}
-                        result={
-                                    Object {
-                                                "artist": "Luis Fonsi",
-                                                "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                                "name": "Despacito - Remix",
-                                              }
-                        }
-            />
-            <SongLink
-                        handleClick={[Function]}
-                        result={
-                                    Object {
-                                                "artist": "Luis Fonsi",
-                                                "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                                "name": "Despacito (Featuring Daddy Yankee)",
-                                              }
-                        }
-            />
-            <SongLink
-                        handleClick={[Function]}
-                        result={
-                                    Object {
-                                                "artist": "Madilyn Bailey",
-                                                "id": "4vxA3aI7l73i0Hi819OQhH",
-                                                "name": "Despacito",
-                                              }
-                        }
-            />
-</div>,
-          "circle": false,
-          "rounded": true,
-          "style": Object {
-            "backgroundColor": "#181A1B",
-            "margin": "0 auto",
-            "maxWidth": 800,
-            "padding": "20px",
-          },
-          "transitionEnabled": true,
-          "zDepth": 1,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <SongLink
-                handleClick={[Function]}
-                result={
-                                Object {
-                                                "artist": "Luis Fonsi",
-                                                "id": "6rPO02ozF3bM7NnOV4h6s2",
-                                                "name": "Despacito - Remix",
-                                              }
-                }
-/>,
-              <SongLink
-                handleClick={[Function]}
-                result={
-                                Object {
-                                                "artist": "Luis Fonsi",
-                                                "id": "7CUYHcu0RnbOnMz4RuN07w",
-                                                "name": "Despacito (Featuring Daddy Yankee)",
-                                              }
-                }
-/>,
-              <SongLink
-                handleClick={[Function]}
-                result={
-                                Object {
-                                                "artist": "Madilyn Bailey",
-                                                "id": "4vxA3aI7l73i0Hi819OQhH",
-                                                "name": "Despacito",
-                                              }
-                }
-/>,
-            ],
-            "className": "search-results--p",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "6rPO02ozF3bM7NnOV4h6s2",
-              "nodeType": "function",
-              "props": Object {
-                "handleClick": [Function],
-                "result": Object {
-                  "artist": "Luis Fonsi",
-                  "id": "6rPO02ozF3bM7NnOV4h6s2",
-                  "name": "Despacito - Remix",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "7CUYHcu0RnbOnMz4RuN07w",
-              "nodeType": "function",
-              "props": Object {
-                "handleClick": [Function],
-                "result": Object {
-                  "artist": "Luis Fonsi",
-                  "id": "7CUYHcu0RnbOnMz4RuN07w",
-                  "name": "Despacito (Featuring Daddy Yankee)",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "4vxA3aI7l73i0Hi819OQhH",
-              "nodeType": "function",
-              "props": Object {
-                "handleClick": [Function],
-                "result": Object {
-                  "artist": "Madilyn Bailey",
-                  "id": "4vxA3aI7l73i0Hi819OQhH",
-                  "name": "Despacito",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
-          "type": "div",
-        },
-        "type": [Function],
-      },
-      "type": "div",
+      "rendered": null,
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

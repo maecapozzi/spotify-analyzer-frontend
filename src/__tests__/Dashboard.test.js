@@ -10,11 +10,11 @@ configure({ adapter: new Adapter() })
 test('it renders correctly', () => {
   const dashboardProps = {
     acousticness: 0.222,
-    albumImages: {
+    albumImages: [
       0: {height: 640, url: 'https://i.scdn.co/image/edcc53317411b5e025e920857fb0f871c4087ce9', width: 640},
       1: {height: 300, url: 'https://i.scdn.co/image/ebdc2f8abd0846f609e8b81a6c208935a3bd6eea', width: 300},
       2: {height: 64, url: 'https://i.scdn.co/image/01ca097819d504ee54d22bf46a2cded3e09bb7e3', width: 64}
-    },
+    ],
     albumLink: 'https://open.spotify.com/album/3Gq2Dme9nesdgoqNNlcN8O',
     artist: 'Luis Fonsi',
     danceability: 0.63,
