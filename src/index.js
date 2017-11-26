@@ -1,17 +1,23 @@
-import 'raf/polyfill'
-
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import registerServiceWorker from './registerServiceWorker'
 
 import App from './App'
-import registerServiceWorker from './registerServiceWorker'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import './index.css'
+import reducer from './reducers'
 
-ReactDOM.render(
-  <MuiThemeProvider>
-    <App />
-  </MuiThemeProvider>,
+const store = createStore(reducer)
+
+render(
+  <Provider store={store}>
+    <MuiThemeProvider>
+      <App />
+    </MuiThemeProvider>
+  </Provider>,
   document.getElementById('root')
 )
 registerServiceWorker()

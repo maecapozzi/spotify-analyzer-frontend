@@ -1,24 +1,24 @@
 import React, { Component } from 'react'
+
+import { connect } from 'react-redux'
 import axios from 'axios'
 import PropTypes from 'prop-types'
-
 import BodyCopy from './BodyCopy'
 import Dashboard from './Dashboard'
 import Header from './Header'
 import SearchBar from 'material-ui-search-bar'
 import SearchResults from './SearchResults'
-
+// Todo: Refactor getSong & getSongs into redux
 import { getSong } from '../lib/apiService'
 import { getSongs } from '../lib/searchHelper'
+import { collectUserInput } from '../actions/index'
 
-class Home extends Component {
+export class Home extends Component {
   constructor (props) {
     super(props)
-
     this.url = `${this.props.url}/search?`
     this.state = {
       loadingPage: false,
-      value: '',
       results: '',
       danceability: '',
       acousticness: '',
@@ -33,20 +33,20 @@ class Home extends Component {
       showSearchResults: true
     }
 
-    this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
     this.setLoadingPage = this.setLoadingPage.bind(this)
     this.setHome = this.setHome.bind(this)
     this.setDashboard = this.setDashboard.bind(this)
     this.setLoadingScreen = this.setLoadingScreen.bind(this)
   }
 
-  handleChange (event) {
-    this.setState({ value: event })
+  handleChange (event) { 
+    this.props.dispatch(collectUserInput(event))
   }
 
   handleSubmit () {
-    const value = this.state.value
+    const value = this.props.value
     getSong(value)
       .then(response => {
         if (response.status === 200) {
@@ -55,7 +55,9 @@ class Home extends Component {
         }
       })
       .catch((error) => {
-        throw new Error('Could not get a response from the server!')
+        if (error) {
+          throw new Error('Could not get a response from the server!')
+        }
       }
     )
   }
@@ -181,7 +183,13 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-  url: PropTypes.string
+  url: PropTypes.string.isRequired
 }
 
-export default Home
+const mapStateToProps = state => {
+  return {
+    value: state.value
+  }
+}
+
+export default connect(mapStateToProps)(Home)
