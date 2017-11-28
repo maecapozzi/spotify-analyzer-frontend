@@ -1,6 +1,6 @@
 # Spotify Viz Frontend
 
-https://spotify-viz-frontend.herokuapp.com/
+https://www.ear-worm.com
 
 ## To run locally:
 
