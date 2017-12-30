@@ -1,9 +1,11 @@
 let backendHost
 const hostname = window && window.location && window.location.hostname
-
-if (hostname === 'https://www.ear-worm.com' || hostname === 'https://www.spotify-viz-frontend.herokuapp.com') {
+console.log(hostname)
+if (hostname === 'ear-worm.com') {
   backendHost = 'https://spotify-viz-api.herokuapp.com'
-} else {
+} else if (hostname === 'spotify-viz-frontend.herokuapp.com') {
+  backendHost = 'https://spotify-viz-api.herokuapp.com'
+} else if (hostname === 'localhost') {
   backendHost = 'http://localhost:3001'
 }
 
