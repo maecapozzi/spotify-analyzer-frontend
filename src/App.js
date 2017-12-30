@@ -6,6 +6,8 @@ import injectSheet from 'react-jss'
 import Home from './components/Home'
 import Login from './components/Login'
 
+import { API_ROOT } from './api-config'
+
 const styles = {
   errors: {
     color: '#00C457',
@@ -19,8 +21,7 @@ class App extends Component {
   constructor (props) {
     super(props)
 
-    this.url = 'https://spotify-viz-api.herokuapp.com'
-    // this.url = 'http://localhost:3001'
+    this.url = API_ROOT
 
     this.state = {
       loggedIn: false,

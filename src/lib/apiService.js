@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-let uri = 'https://spotify-viz-api.herokuapp.com'
-// let uri = 'http://localhost:3001'
+import { API_ROOT } from '../api-config'
+
+let uri = API_ROOT
 let url = `${uri}/search?`
 
 export const getSong = value => {
