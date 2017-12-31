@@ -13,6 +13,7 @@ const styles = {
   loginButton: {
     backgroundColor: '#00C457',
     border: 'none',
+    borderRadius: '30px',
     color: 'white',
     cursor: 'pointer',
     fontFamily: 'Inconsolata',
@@ -32,7 +33,7 @@ const LoginButton = ({ classes, url }) => {
     <div className={classes.loginContainer}>
       <a className={classes.buttonLink} href={`${url}/auth/spotify`}>
         <button className={classes.loginButton}>
-          Login with Spotify
+          LOGIN WITH SPOTIFY
         </button>
       </a>
     </div>

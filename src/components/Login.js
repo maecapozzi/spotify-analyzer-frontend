@@ -4,13 +4,24 @@ import PropTypes from 'prop-types'
 import BodyCopy from './BodyCopy'
 import Header from './Header'
 import LoginButton from './LoginButton'
+import injectSheet from 'react-jss'
+
+const styles = {
+  bodyCopy: {
+    margin: '200em'
+  }
+}
 
 const Login = ({ classes, url }) => (
   <div>
-    <Header string={'EARWORM'} />
-    <BodyCopy string={ 
-      'Earworm allows you to learn more about the songs you love. Search for old and new favorites and see Spotify data visualizations about them.'
-    } />
+    <Header string={'earworm'} />
+    <BodyCopy 
+      string={
+        `earworm helps users understand why they love a song via 
+         granular insights, while aiding and encouraging exploration 
+         and discovery.`
+      }
+    />
     <LoginButton url={url} />
   </div>
 )
@@ -19,4 +30,4 @@ Login.propTypes = {
   url: PropTypes.string
 }
 
-export default Login
+export default injectSheet(styles)(Login)
