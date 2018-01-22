@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "format": "prettier-standard 'src/**/*.js'"
+    "format": "prettier-standard 'src/**/*.js'",
+    "precommit": "lint-staged"
   },
   "proxy": "https://spotify-viz-api.herokuapp.com",
   "devDependencies": {
@@ -37,7 +38,9 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.5.0",
     "eslint-plugin-react": "^7.3.0",
+    "husky": "^0.15.0-rc.2",
     "jest": "^21.0.1",
+    "lint-staged": "^6.0.1",
     "material-ui": "^0.19.1",
     "prettier-standard": "^8.0.0",
     "redux-devtools": "^3.4.1",
@@ -47,6 +50,12 @@
   "standard": {
     "ignore": [
       "__tests__/**.test.js"
+    ]
+  },
+  "lint-staged": {
+   "*.js": [
+      "prettier-standard",
+      "git add"
     ]
   }
 }
