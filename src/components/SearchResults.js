@@ -19,11 +19,22 @@ const styles = {
 
 const SearchResults = ({ classes, handleClick, results }) => (
   <div className={classes.searchResultsContainer}>
-    <Paper style={{ maxWidth: 800, margin: '0 auto', padding: '20px', backgroundColor: '#181A1B' }}>
+    <Paper
+      style={{
+        maxWidth: 800,
+        margin: '0 auto',
+        padding: '20px',
+        backgroundColor: '#181A1B'
+      }}
+    >
       <div className={classes.p}>
-        {results.map(result =>
-          <SongLink key={result.id} result={result} handleClick={handleClick.bind(this, result)} />
-        )}
+        {results.map(result => (
+          <SongLink
+            key={result.id}
+            result={result}
+            handleClick={handleClick.bind(this, result)}
+          />
+        ))}
       </div>
     </Paper>
   </div>

@@ -15,12 +15,10 @@ const styles = {
 const Login = ({ classes, url }) => (
   <div>
     <Header string={'earworm'} />
-    <BodyCopy 
-      string={
-        `earworm helps users understand why they love a song via 
+    <BodyCopy
+      string={`earworm helps users understand why they love a song via 
          granular insights, while aiding and encouraging exploration 
-         and discovery.`
-      }
+         and discovery.`}
     />
     <LoginButton url={url} />
   </div>

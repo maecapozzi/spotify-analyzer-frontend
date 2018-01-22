@@ -12,9 +12,7 @@ const styles = {
   }
 }
 
-const Header = ({classes, string}) => (
-  <h1 className={classes.h1}>{string}</h1>
-)
+const Header = ({ classes, string }) => <h1 className={classes.h1}>{string}</h1>
 
 Header.propTypes = {
   string: PropTypes.string

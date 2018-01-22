@@ -30,23 +30,24 @@ class App extends Component {
   }
 
   componentWillMount () {
-    axios.get(this.url, {
-      withCredentials: true
-    })
-    .then((response) => {
-      if (response.status === 200) {
-        if (response.data.isAuthenticated) {
-          this.setState({ loggedIn: true })
-        } else if (!response.data.isAuthenticated) {
-          this.setState({ loggedIn: false })
+    axios
+      .get(this.url, {
+        withCredentials: true
+      })
+      .then(response => {
+        if (response.status === 200) {
+          if (response.data.isAuthenticated) {
+            this.setState({ loggedIn: true })
+          } else if (!response.data.isAuthenticated) {
+            this.setState({ loggedIn: false })
+          }
         }
-      }
-    })
-    .catch((error) => {
-      if (error) {
-        this.setState(state => ({ ...state, hasErrors: true }))
-      }
-    })
+      })
+      .catch(error => {
+        if (error) {
+          this.setState(state => ({ ...state, hasErrors: true }))
+        }
+      })
   }
 
   componentDidCatch (error) {

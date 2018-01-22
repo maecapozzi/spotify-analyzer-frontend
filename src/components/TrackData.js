@@ -8,9 +8,11 @@ const styles = {
   }
 }
 
-const TrackData = ({classes, title, artist, albumLink, albumImages}) => (
+const TrackData = ({ classes, title, artist, albumLink, albumImages }) => (
   <div>
-    <h3 className={classes.h3}>{title} by {artist}</h3>
+    <h3 className={classes.h3}>
+      {title} by {artist}
+    </h3>
     <a target='#' href={albumLink}>
       <img src={albumImages[1].url} alt='Album Cover' />
     </a>
@@ -18,8 +20,8 @@ const TrackData = ({classes, title, artist, albumLink, albumImages}) => (
 )
 
 TrackData.propTypes = {
-  title: PropTypes.string, 
-  artist: PropTypes.string, 
+  title: PropTypes.string,
+  artist: PropTypes.string,
   albumLink: PropTypes.string,
   albumImages: PropTypes.array
 }

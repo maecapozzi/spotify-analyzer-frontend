@@ -13,15 +13,11 @@ const styles = {
   }
 }
 
-const DataCard = ({classes, component}) => {
-  return (
-    <Card className={classes.card}>
-      {component}
-    </Card>
-  )
+const DataCard = ({ classes, component }) => {
+  return <Card className={classes.card}>{component}</Card>
 }
 
-DataCard.propTypes = { 
+DataCard.propTypes = {
   component: PropTypes.object
 }
 export default injectSheet(styles)(DataCard)

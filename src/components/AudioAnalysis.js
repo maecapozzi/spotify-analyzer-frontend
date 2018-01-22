@@ -11,7 +11,7 @@ const styles = {
   }
 }
 
-const AudioAnalysis = ({classes, type, value}) => (
+const AudioAnalysis = ({ classes, type, value }) => (
   <div>
     <span className={classes.type}>{type}: </span>
     <span className={classes.value}>{value}</span>

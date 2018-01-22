@@ -10,7 +10,8 @@ const reducer = (state = initialState, action) => {
       return Object.assign({}, state, {
         value: action.event
       })
-    default: return state
+    default:
+      return state
   }
 }
 

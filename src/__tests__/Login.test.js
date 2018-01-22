@@ -11,7 +11,7 @@ test('it renders correctly', () => {
   const LoginProps = {
     url: 'http://localhost:3001'
   }
-  
+
   const component = shallow(<Login {...LoginProps} />)
   expect(component).toMatchSnapshot()
 })

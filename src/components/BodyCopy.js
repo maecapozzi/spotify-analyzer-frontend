@@ -14,7 +14,7 @@ const styles = {
 }
 
 const BodyCopy = ({ classes, string }) => (
-  <h3 className={classes.h3}>{string}</h3> 
+  <h3 className={classes.h3}>{string}</h3>
 )
 
 BodyCopy.propTypes = {

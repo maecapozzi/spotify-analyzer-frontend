@@ -21,7 +21,15 @@ class Dashboard extends Component {
       },
       title: 'Audio Features',
       xAxis: {
-        categories: ['danceability', 'acousticness', 'energy', 'liveness', 'instrumentalness', 'speechiness', 'valence']
+        categories: [
+          'danceability',
+          'acousticness',
+          'energy',
+          'liveness',
+          'instrumentalness',
+          'speechiness',
+          'valence'
+        ]
       },
       yAxis: {
         max: 1,
@@ -35,37 +43,43 @@ class Dashboard extends Component {
           colors: ['#00C457']
         }
       },
-      series: [{
-        data: [
-          this.props.danceability,
-          this.props.acousticness,
-          this.props.energy,
-          this.props.liveness,
-          this.props.instrumentalness,
-          this.props.speechiness,
-          this.props.valence
-        ]
-      }]
+      series: [
+        {
+          data: [
+            this.props.danceability,
+            this.props.acousticness,
+            this.props.energy,
+            this.props.liveness,
+            this.props.instrumentalness,
+            this.props.speechiness,
+            this.props.valence
+          ]
+        }
+      ]
     }
     return (
       <div>
         <Grid fluid>
           <Row>
             <Col xs={12} lg={12}>
-              <DataCard component={<ReactHighcharts config={config} ref='test' />} />
+              <DataCard
+                component={<ReactHighcharts config={config} ref='test' />}
+              />
             </Col>
           </Row>
           <Row>
             <Col xs={12} lg={6}>
-              <DataCard component={
-                <TrackData
-                  title={this.props.title}
-                  artist={this.props.artist}
-                  albumLink={this.props.albumLink}
-                  popularity={this.props.popularity}
-                  albumImages={this.props.albumImages}
-                />
-              } />
+              <DataCard
+                component={
+                  <TrackData
+                    title={this.props.title}
+                    artist={this.props.artist}
+                    albumLink={this.props.albumLink}
+                    popularity={this.props.popularity}
+                    albumImages={this.props.albumImages}
+                  />
+                }
+              />
             </Col>
             <Col xs={12} lg={6}>
               <DataCard component={<ChartKey />} />
@@ -76,23 +90,28 @@ class Dashboard extends Component {
               <DataCard
                 component={
                   <AudioAnalysis
-                    type={'Time Signature'} value={this.props.timeSignature}
-                  />}
+                    type={'Time Signature'}
+                    value={this.props.timeSignature}
+                  />
+                }
               />
             </Col>
             <Col xs={12} lg={4}>
-              <DataCard component={
-                <AudioAnalysis
-                  type={'Tempo'} value={this.props.tempo}
-                />
-              } />
+              <DataCard
+                component={
+                  <AudioAnalysis type={'Tempo'} value={this.props.tempo} />
+                }
+              />
             </Col>
             <Col xs={12} lg={4}>
-              <DataCard component={
-                <AudioAnalysis
-                  type={'Duration'} value={this.props.duration}
-                />
-              } />
+              <DataCard
+                component={
+                  <AudioAnalysis
+                    type={'Duration'}
+                    value={this.props.duration}
+                  />
+                }
+              />
             </Col>
           </Row>
         </Grid>

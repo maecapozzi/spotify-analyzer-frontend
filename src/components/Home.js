@@ -41,7 +41,7 @@ export class Home extends Component {
     this.setLoadingScreen = this.setLoadingScreen.bind(this)
   }
 
-  handleChange (event) { 
+  handleChange (event) {
     this.props.dispatch(collectUserInput(event))
   }
 
@@ -54,64 +54,68 @@ export class Home extends Component {
           this.setState({ results, showSearchResults: true })
         }
       })
-      .catch((error) => {
+      .catch(error => {
         if (error) {
           throw new Error('Could not get a response from the server!')
         }
-      }
-    )
+      })
   }
 
   setLoadingPage () {
-    this.setState({loadingPage: true})
-    setTimeout(() => this.setState({loadingPage: false}), 6000)
+    this.setState({ loadingPage: true })
+    setTimeout(() => this.setState({ loadingPage: false }), 6000)
   }
 
   handleClick (result) {
     this.setLoadingPage()
     let uri = this.props.url + '/analyze/' + result.id
-    axios.get(uri, {
-      withCredentials: true
-    })
-    .then((response) => {
-      if (response.status === 200) {
-        const responseData = {
-          audioFeatures: response.data[0],
-          trackData: response.data[1],
-          audioAnalysis: response.data[2]
+    axios
+      .get(uri, {
+        withCredentials: true
+      })
+      .then(response => {
+        if (response.status === 200) {
+          const responseData = {
+            audioFeatures: response.data[0],
+            trackData: response.data[1],
+            audioAnalysis: response.data[2]
+          }
+          this.setState({
+            title: result.name,
+            artist: result.artist,
+            danceability: responseData.audioFeatures.danceability,
+            acousticness: responseData.audioFeatures.acousticness,
+            energy: responseData.audioFeatures.energy,
+            liveness: responseData.audioFeatures.liveness,
+            instrumentalness: responseData.audioFeatures.instrumentalness,
+            loudness: responseData.audioFeatures.loudness,
+            speechiness: responseData.audioFeatures.speechiness,
+            valence: responseData.audioFeatures.valence,
+            showSearchResults: false,
+            albumLink: responseData.trackData.album.external_urls.spotify,
+            popularity: responseData.trackData.popularity,
+            albumImages: responseData.trackData.album.images,
+            timeSignature: responseData.audioAnalysis.track.time_signature,
+            tempo: responseData.audioAnalysis.track.tempo,
+            songKey: responseData.audioAnalysis.track.key,
+            duration: responseData.audioAnalysis.track.duration
+          })
         }
-        this.setState({
-          title: result.name,
-          artist: result.artist,
-          danceability: responseData.audioFeatures.danceability,
-          acousticness: responseData.audioFeatures.acousticness,
-          energy: responseData.audioFeatures.energy,
-          liveness: responseData.audioFeatures.liveness,
-          instrumentalness: responseData.audioFeatures.instrumentalness,
-          loudness: responseData.audioFeatures.loudness,
-          speechiness: responseData.audioFeatures.speechiness,
-          valence: responseData.audioFeatures.valence,
-          showSearchResults: false,
-          albumLink: responseData.trackData.album.external_urls.spotify,
-          popularity: responseData.trackData.popularity,
-          albumImages: responseData.trackData.album.images,
-          timeSignature: responseData.audioAnalysis.track.time_signature,
-          tempo: responseData.audioAnalysis.track.tempo,
-          songKey: responseData.audioAnalysis.track.key,
-          duration: responseData.audioAnalysis.track.duration
-        })
-      }
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   setHome () {
     return (
       <div>
         <Header string={'EARWORM'} />
-        <BodyCopy string={'Search for a song on Spotify and view the audio features of that song'} />
+        <BodyCopy
+          string={
+            'Search for a song on Spotify and view the audio features of that song'
+          }
+        />
         <SearchBar
           style={{
             margin: '0 auto',
@@ -121,7 +125,7 @@ export class Home extends Component {
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
           onRequestSearch={this.handleSubmit}
-          />
+        />
       </div>
     )
   }
@@ -149,7 +153,7 @@ export class Home extends Component {
             songKey={this.state.songKey}
             loudness={this.state.loudness}
             duration={this.state.duration}
-            />
+          />
         </div>
       </div>
     )

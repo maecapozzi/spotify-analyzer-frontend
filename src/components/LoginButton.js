@@ -32,9 +32,7 @@ const LoginButton = ({ classes, url }) => {
   return (
     <div className={classes.loginContainer}>
       <a className={classes.buttonLink} href={`${url}/auth/spotify`}>
-        <button className={classes.loginButton}>
-          LOGIN WITH SPOTIFY
-        </button>
+        <button className={classes.loginButton}>LOGIN WITH SPOTIFY</button>
       </a>
     </div>
   )
