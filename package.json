@@ -1,6 +1,9 @@
 {
   "name": "spotify-analyzer-frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "private": true,
   "dependencies": {
     "dotenv": "^4.0.0",
