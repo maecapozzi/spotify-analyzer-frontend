@@ -8,7 +8,7 @@ const styles = {
   card: {
     border: '1px #272B2D solid',
     padding: '2em',
-    backgroundColor: '#181A1B !important',
+    backgroundColor: '#022B3A !important',
     height: '430px'
   }
 }

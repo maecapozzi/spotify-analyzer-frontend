@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const styles = {
   h1: {
-    color: '#00C457',
+    color: '#BFDBF7',
     fontFamily: 'Inconsolata',
     textAlign: 'center'
   }

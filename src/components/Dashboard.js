@@ -17,7 +17,7 @@ class Dashboard extends Component {
         backgroundColor: '#181A1B'
       },
       labels: {
-        color: '#5A6575'
+        color: '#F066A6'
       },
       title: 'Audio Features',
       xAxis: {
@@ -40,7 +40,7 @@ class Dashboard extends Component {
       plotOptions: {
         series: {
           colorByPoint: true,
-          colors: ['#00C457']
+          colors: ['#F066A6']
         }
       },
       series: [
@@ -90,7 +90,7 @@ class Dashboard extends Component {
               <DataCard
                 component={
                   <AudioAnalysis
-                    type={'Time Signature'}
+                    type='Time Signature'
                     value={this.props.timeSignature}
                   />
                 }
@@ -99,17 +99,14 @@ class Dashboard extends Component {
             <Col xs={12} lg={4}>
               <DataCard
                 component={
-                  <AudioAnalysis type={'Tempo'} value={this.props.tempo} />
+                  <AudioAnalysis type='Tempo' value={this.props.tempo} />
                 }
               />
             </Col>
             <Col xs={12} lg={4}>
               <DataCard
                 component={
-                  <AudioAnalysis
-                    type={'Duration'}
-                    value={this.props.duration}
-                  />
+                  <AudioAnalysis type='Duration' value={this.props.duration} />
                 }
               />
             </Col>

@@ -7,13 +7,13 @@ import SongLink from './SongLink'
 
 const styles = {
   searchResultsContainer: {
-    color: '#5A6575',
+    color: '#E1E5F2',
     fontFamily: 'Inconsolata',
     letterSpacing: '2px',
     marginTop: '20px'
   },
   p: {
-    color: '#5A6575'
+    color: '#E1E5F2'
   }
 }
 
@@ -24,7 +24,7 @@ const SearchResults = ({ classes, handleClick, results }) => (
         maxWidth: 800,
         margin: '0 auto',
         padding: '20px',
-        backgroundColor: '#181A1B'
+        backgroundColor: '#022B3A'
       }}
     >
       <div className={classes.p}>

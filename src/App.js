@@ -57,7 +57,7 @@ class App extends Component {
   render () {
     if (!this.state.loggedIn && !this.state.hasErrors) {
       return (
-        <div className='login-container'>
+        <div>
           <ErrorBoundary>
             <Login url={this.url} />
           </ErrorBoundary>

@@ -1,33 +1,33 @@
- body {
+body {
   margin: 0;
   padding: 0;
   font-family: 'Inconsolata' sans-serif;
-  background-color: #272B2D;
+  background-color: #1F7A8C;
 }
 
 p { 
-  color: #5A6575;
+  color: #4F55A6;
 }
 
 .header {
-  color: #00C457;
+  color: #022B3A;
   font-family: 'Roboto';
   font-size: 3em;
 }
 
 .subheader {
-  color: #5A6575;
+  color: #FFFFFF;
   font-family: 'Roboto';
   text-align: center;
 }
 
 .home-button {
-  color: #00C457;
+  color: #F066A6;
 }
 
 .search__form {
   background-color: #181A1B;
-  color: #00C457;
+  color: #F066A6;
   text-align: center;
   margin-top: 2em;
 }
@@ -43,7 +43,7 @@ p {
 }
 
 .search-results--p {
-  color: #5A6575;
+  color: #F066A6;
   font-family: 'Roboto';
 }
 
@@ -53,8 +53,9 @@ p {
 }
 
 .loading-data {
-  text-align: center; 
-  color: #00C457;
+  text-align: center;
+  font-family: 'Inconsolata'; 
+  color: #BFDBF7;
 }
 
 .song-data {

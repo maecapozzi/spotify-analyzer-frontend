@@ -4,11 +4,12 @@ import injectSheet from 'react-jss'
 
 const styles = {
   h1: {
-    color: '#00C457',
+    color: '#BFDBF7',
     fontFamily: 'Inconsolata',
     fontWeight: '300',
     letterSpacing: '3px',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: '5em'
   }
 }
 

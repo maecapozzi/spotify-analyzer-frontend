@@ -11,7 +11,7 @@ const styles = {
     textAlign: 'center'
   },
   loginButton: {
-    backgroundColor: '#00C457',
+    backgroundColor: '#F066A6',
     border: 'none',
     borderRadius: '30px',
     color: 'white',
@@ -19,11 +19,11 @@ const styles = {
     fontFamily: 'Inconsolata',
     fontSize: '1em',
     height: '4em',
-    width: '20em',
+    width: '15em',
     margin: [20, 20]
   },
   buttonLink: {
-    fontFamily: 'Roboto',
+    fontFamily: 'Inconsolata',
     textDecoration: 'none'
   }
 }
@@ -32,7 +32,7 @@ const LoginButton = ({ classes, url }) => {
   return (
     <div className={classes.loginContainer}>
       <a className={classes.buttonLink} href={`${url}/auth/spotify`}>
-        <button className={classes.loginButton}>LOGIN WITH SPOTIFY</button>
+        <button className={classes.loginButton}>log in with spotify</button>
       </a>
     </div>
   )
