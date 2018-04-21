@@ -32,20 +32,13 @@ export class Home extends Component {
       artist: '',
       showSearchResults: true
     }
-
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.setLoadingPage = this.setLoadingPage.bind(this)
-    this.setHome = this.setHome.bind(this)
-    this.setDashboard = this.setDashboard.bind(this)
-    this.setLoadingScreen = this.setLoadingScreen.bind(this)
   }
 
-  handleChange (event) {
+  handleChange = event => {
     this.props.dispatch(collectUserInput(event))
   }
 
-  handleSubmit () {
+  handleSubmit = () => {
     const value = this.props.value
     getSong(value)
       .then(response => {
@@ -61,12 +54,12 @@ export class Home extends Component {
       })
   }
 
-  setLoadingPage () {
+  setLoadingPage = () => {
     this.setState({ loadingPage: true })
     setTimeout(() => this.setState({ loadingPage: false }), 6000)
   }
 
-  handleClick (result) {
+  handleClick = result => {
     this.setLoadingPage()
     let uri = this.props.url + '/analyze/' + result.id
     axios
@@ -103,23 +96,23 @@ export class Home extends Component {
         }
       })
       .catch(error => {
-        console.log(error)
+        throw new Error(error)
       })
   }
 
-  setHome () {
+  setHome = () => {
     return (
       <div>
-        <Header string={'EARWORM'} />
+        <Header string='earworm' />
         <BodyCopy
-          string={
+          copy={
             'Search for a song on Spotify and view the audio features of that song'
           }
         />
         <SearchBar
           style={{
             margin: '0 auto',
-            maxWidth: 800,
+            maxWidth: 600,
             marginTop: 50
           }}
           onSubmit={this.handleSubmit}
@@ -130,7 +123,7 @@ export class Home extends Component {
     )
   }
 
-  setDashboard () {
+  setDashboard = () => {
     return (
       <div>
         {this.setHome()}
@@ -159,7 +152,7 @@ export class Home extends Component {
     )
   }
 
-  setLoadingScreen () {
+  setLoadingScreen = () => {
     return <h1 className='loading-data'>Loading Data</h1>
   }
 

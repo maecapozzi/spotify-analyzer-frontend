@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 
 const styles = {
   type: {
-    color: '#5A6575'
+    color: '#F066A6'
   },
   value: {
-    color: '#00C457'
+    color: '#F066A6'
   }
 }
 

@@ -17,7 +17,7 @@ class Dashboard extends Component {
         backgroundColor: '#181A1B'
       },
       labels: {
-        color: '#5A6575'
+        color: '#F066A6'
       },
       title: 'Audio Features',
       xAxis: {
@@ -40,7 +40,7 @@ class Dashboard extends Component {
       plotOptions: {
         series: {
           colorByPoint: true,
-          colors: ['#00C457']
+          colors: ['#F066A6']
         }
       },
       series: [

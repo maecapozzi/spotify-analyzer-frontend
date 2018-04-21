@@ -24,7 +24,7 @@ class App extends Component {
     this.url = API_ROOT
 
     this.state = {
-      loggedIn: 'isNotLoggedIn',
+      loggedIn: false,
       hasErrors: false
     }
   }
@@ -37,9 +37,9 @@ class App extends Component {
       .then(response => {
         if (response.status === 200) {
           if (response.data.isAuthenticated) {
-            this.setState({ loggedIn: 'isLoggedIn' })
+            this.setState({ loggedIn: true })
           } else if (!response.data.isAuthenticated) {
-            this.setState({ loggedIn: 'isNotLoggedIn' })
+            this.setState({ loggedIn: false })
           }
         }
       })
@@ -55,15 +55,15 @@ class App extends Component {
   }
 
   render () {
-    if (!this.state.loggedIn === 'isNotLoggedIn' && !this.state.hasErrors) {
+    if (!this.state.loggedIn && !this.state.hasErrors) {
       return (
-        <div className='login-container'>
+        <div>
           <ErrorBoundary>
             <Login url={this.url} />
           </ErrorBoundary>
         </div>
       )
-    } else if (this.state.loggedIn === 'isLoggedIn' && !this.state.hasErrors) {
+    } else if (this.state.loggedIn && !this.state.hasErrors) {
       return (
         <div>
           <ErrorBoundary>
