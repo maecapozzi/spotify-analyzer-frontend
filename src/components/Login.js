@@ -14,7 +14,7 @@ const styles = {
 
 const Login = ({ classes, url }) => (
   <div>
-    <Header string={'earworm'} />
+    <Header string='earworm' />
     <BodyCopy
       copy={`earworm helps users understand why they love a song via 
          granular insights, while aiding and encouraging exploration 

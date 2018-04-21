@@ -16,7 +16,7 @@ const styles = {
 const BodyCopy = ({ classes, copy }) => <h3 className={classes.h3}>{copy}</h3>
 
 BodyCopy.propTypes = {
-  string: PropTypes.copy
+  copy: PropTypes.string.isRequired
 }
 
 export default injectSheet(styles)(BodyCopy)
