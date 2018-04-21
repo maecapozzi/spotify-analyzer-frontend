@@ -11,7 +11,7 @@ const styles = {
     textAlign: 'center'
   },
   loginButton: {
-    backgroundColor: '#F066A6',
+    backgroundColor: '#022B3A',
     border: 'none',
     borderRadius: '30px',
     color: 'white',
