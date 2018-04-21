@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-eslint": "^7.2.3",
     "dotenv": "^4.0.0",
     "flexbox-react": "^4.4.0",
     "highcharts": "^5.0.14",
@@ -25,8 +24,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "format": "prettier-standard 'src/**/*.js'",
-    "precommit": "lint-staged"
+    "format": "prettier-standard 'src/**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "proxy": "https://spotify-viz-api.herokuapp.com",
   "devDependencies": {
@@ -53,7 +56,7 @@
     ]
   },
   "lint-staged": {
-   "*.js": [
+    "*.js": [
       "prettier-standard",
       "git add"
     ]
